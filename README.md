@@ -3,17 +3,19 @@
 llmerge [Home website](http://landenlabs.com)  
 19-Jan-2020  
   
-### Compact Fast CSV Parser   
+### Simple C++ Text file comparison and/or merge command line utility.
 Simple text file row by row comparison or merge.
 
   [![Build status](https://travis-ci.org/landenlabs/llmerge.svg?branch=master)](https://travis-ci.org/landenlabs/llmerge)
   
 
 ## Key features   
-1. Simple C++ code
-2. Side by side comparison
-3. or Merge
- 
+1. Simple C++ code to read and compare text file row by row.
+2. Output side-by-side or merged
+3. Optional regular expression to replace text prior to comparison
+4. Optional regular expression to extract comparison text
+5. Optional regular expression to extract merge text
+
 ***  
   
 [Home webpage ](http://landenlabs.com/index.html) 
@@ -64,5 +66,5 @@ Links:
 </pre>
  
   
-[To Top](#csv)  
+[To Top](#llmerge)  
 <br>[Home website](http://landenlabs.com)
