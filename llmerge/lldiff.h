@@ -76,6 +76,7 @@ class Diff {
     // Optional regular expression to replace text in rows.
     ReplaceList replaceList;
     
+    unsigned scanRows;      // How far to scan for a match.
     unsigned minMatch;      // minimum number or rows to match during scan
     unsigned maxMatch;      // maximum number of rows to match during scan, smaller faster, longer better match
     unsigned width;         // side-by-side output padding, max of input files.
@@ -85,6 +86,7 @@ class Diff {
     
     Diff() :
         cmpRxP(2, NULL), mergeRxP(2, NULL),
+        scanRows(100),
         minMatch(3), maxMatch(6),
         width(0),
         replaceList()
@@ -98,7 +100,7 @@ class Diff {
         in.open(filename);
         widths[idx] = readFile(in, vecLines, replaceList);
         in.close();
-        std::cerr << vecLines.size() << " lines from:" << filename << std::endl;
+        std::cerr << vecLines.size() << " lines, max width=" << widths[idx] << " from:" << filename << std::endl;
         
         if (idx == 0) {
             makeHash(fileLines0, hashList0, cmpRxP[0]);
@@ -186,7 +188,7 @@ protected:
     
     void makeHash(StrList& lines, HashList& hashes, std::regex* cmpRxP) {
         hashes.reserve(lines.size());
-        if (cmpRxP == nullptr) {
+        if (cmpRxP != nullptr) {
             std::smatch match;
             for (RowNum idx = 0; idx < lines.size(); idx++) {
                 const std::string& lineStr = lines[idx];

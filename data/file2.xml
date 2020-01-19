@@ -51,14 +51,6 @@
         <Style significance="A" phenomena="spclMarine" priority="763" fill="true" fillColor="255,165,0" fillOpacity="0.3" outline="false" outlineColor="255,165,0" countryCode="CA"/>
         <Style significance="Y" phenomena="SW" priority="800" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
         <Style significance="Y" phenomena="RB" priority="810" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
-        <Style significance="Y" phenomena="SI" priority="820" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
-        <Style significance="Y" phenomena="SC" priority="830" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
-        <Style significance="W" phenomena="SE" priority="850" fill="true" fillColor="216,191,216" fillOpacity="0.7" outline="false" outlineColor="216,191,216" countryCode="US"/>
-        <Style significance="Y" phenomena="LW" priority="880" fill="true" fillColor="210,180,140" fillOpacity="0.5" outline="false" outlineColor="210,180,140" countryCode="US"/>
-        <Style significance="B" phenomena="TCL" priority="990" fill="true" fillColor="64,224,208" fillOpacity="0.5" outline="false" outlineColor="64,224,208" countryCode="US"/>
-        <Style significance="A" phenomena="GL" priority="1010" fill="true" fillColor="255,192,203" fillOpacity="0.3" outline="false" outlineColor="255,192,203" countryCode="US"/>
-        <Style significance="A" phenomena="SE" priority="1030" fill="true" fillColor="72,61,139" fillOpacity="0.3" outline="false" outlineColor="72,61,139" countryCode="US"/>
-        <Style significance="A" phenomena="CF" priority="1050" fill="true" fillColor="102,205,170" fillOpacity="0.3" outline="false" outlineColor="102,205,170" countryCode="US"/>
         <Style significance="Y" phenomena="spclMarine" priority="1110" fill="true" fillColor="255,239,213" fillOpacity="0.5" outline="false" outlineColor="255,239,213" countryCode="CA"/>
         <Style significance="S" phenomena="CF" priority="1180" fill="true" fillColor="107,142,35" fillOpacity="0.5" outline="false" outlineColor="107,142,35" countryCode="US"/>
         <Style significance="S" phenomena="MA" priority="1210" fill="true" fillColor="255,239,213" fillOpacity="0.5" outline="false" outlineColor="255,239,213" countryCode="US"/>

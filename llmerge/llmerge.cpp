@@ -113,9 +113,6 @@ void displayRowsSideBySide(
 void compareTextFiles(const lldiff::Diff& diffInfo)
 {
     unsigned width = diffInfo.width;
-    std::cerr << "  Lines0=" << diffInfo.fileLines0.size() << std::endl;
-    std::cerr << "  Lines1=" << diffInfo.fileLines1.size() << std::endl;
-    std::cerr << "  MaxWidth=" << width << std::endl;
     
     lldiff::RowNum dsp0 = 0;
     lldiff::RowNum dsp1 = 0;
@@ -127,8 +124,7 @@ void compareTextFiles(const lldiff::Diff& diffInfo)
     while (more) {
         more = false;
         rowMatch.clear();
-        const unsigned SCAN_ROWS = 5;
-        for (unsigned idx =0; idx < SCAN_ROWS; idx++) {
+        for (unsigned idx =0; idx < diffInfo.scanRows; idx++) {
             lldiff::RowMatch match0 = diffInfo.rowMatches0(idx, row0, row1); // TODO - use rowMatch instead of row0, row1
             lldiff::RowMatch match1 = diffInfo.rowMatches1(idx, row0, row1); // TODO - use rowMatch instead of row0, row1
             rowMatch = (match0.matchedRows >= match1.matchedRows) ? match0 : match1;
@@ -192,8 +188,7 @@ void mergeTextDiles(lldiff::Diff& diffInfo)
     while (more) {
         more = false;
         rowMatch.clear();
-        const unsigned SCAN_ROWS = 5;
-        for (unsigned idx =0; idx < SCAN_ROWS; idx++) {
+        for (unsigned idx =0; idx < diffInfo.scanRows; idx++) {
             lldiff::RowMatch match0 = diffInfo.rowMatches0(idx, row0, row1); // TODO - use rowMatch instead of row0, row1
             lldiff::RowMatch match1 = diffInfo.rowMatches1(idx, row0, row1); // TODO - use rowMatch instead of row0, row1
             rowMatch = (match0.matchedRows >= match1.matchedRows) ? match0 : match1;
@@ -282,15 +277,22 @@ int main(int argc, char* argv[]) {
     
     if (argIdx+2 <= argc) {
         // ---- Load files and hash lines
-        diffInfo.readFile(argv[argIdx++], 0);
-        diffInfo.readFile(argv[argIdx++], 1);
+        bool got0 = diffInfo.readFile(argv[argIdx++], 0);
+        bool got1 = diffInfo.readFile(argv[argIdx++], 1);
         diffInfo.width = max(diffInfo.widths[0], diffInfo.widths[1]);
         
-        // ---- Merge or compare files.
-        if (doMerge) {
-            mergeTextDiles(diffInfo);
+        if (got0 && got1) {
+            // ---- Merge or compare files.
+            if (doMerge) {
+                mergeTextDiles(diffInfo);
+            } else {
+                compareTextFiles(diffInfo);
+            }
         } else {
-            compareTextFiles(diffInfo);
+            if (!got0)
+                std::cerr << "Failed to load text rows from:" << diffInfo.filenames[0] << std::endl;
+            if (!got1)
+                std::cerr << "Failed to load text rows from:" << diffInfo.filenames[1] << std::endl;
         }
     } else {
         std::cerr << HELP;
