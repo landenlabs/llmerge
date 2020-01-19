@@ -1,0 +1,16 @@
+*.iml
+*.txt
+*.zip
+.gradle
+/local.properties
+/.idea
+/DerivedData/
+/llmerge.xcodeproj/xcshareddata
+/llmerge.xcodeproj/xcuserdata
+/llmerge.xcodeproj/project.xcworkspace
+/build
+/captures
+.DS_Store
+.externalNativeBuild
+git-notes.txt
+
