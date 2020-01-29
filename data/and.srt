@@ -1,0 +1,81 @@
+DP006, WxHourlyFo, HOUR_R  650, 70.0 <= value < 75.0     , Feb 05 01:00 , Feb 05 12:00 , The air feels humid and uncomfortable.
+DP006, WxHourlyFo, HOUR_R  650, 70.0 <= value < 75.0     , Jan 31 15:00 , Feb 01 17:00 , The air feels humid and uncomfortable.
+DP007, WxHourlyFo, DAY_RA  660, 70.0 <= value < 75.0     , Feb 05 01:00 , Feb 05 12:00 , The air feels humid and uncomfortable.
+DP007, WxHourlyFo, DAY_RA  660, 70.0 <= value < 75.0     , Jan 31 15:00 , Feb 01 17:00 , The air feels humid and uncomfortable.
+DP008, WxHourlyFo, HOUR_R  670, 65.0 <= value < 70.0     , Feb 01 17:00 , Feb 01 21:00 , The air feels sticky.
+DP008, WxHourlyFo, HOUR_R  670, 65.0 <= value < 70.0     , Feb 04 04:00 , Feb 05 01:00 , The air feels sticky.
+DP008, WxHourlyFo, HOUR_R  670, 65.0 <= value < 70.0     , Jan 31 11:00 , Jan 31 15:00 , The air feels sticky.
+DP009, WxHourlyFo, DAY_RA  680, 65.0 <= value < 70.0     , Feb 04 04:00 , Feb 05 00:00 , The air feels sticky.
+DP009, WxHourlyFo, DAY_RA  680, 65.0 <= value < 70.0     , Jan 31 11:00 , Feb 01 21:00 , The air feels sticky.
+DP010, WxHourlyFo, HOUR_R  690, 60.0 <= value < 65.0     , Feb 01 21:00 , Feb 02 04:00 , The air feels a little sticky.
+DP010, WxHourlyFo, HOUR_R  690, 60.0 <= value < 65.0     , Feb 03 17:00 , Feb 04 04:00 , The air feels a little sticky.
+DP011, WxHourlyFo, DAY_RA  700, 60.0 <= value < 65.0     , Feb 01 21:00 , Feb 04 04:00 , The air feels a little sticky.
+HI001, WxHourlyFo, HOUR_R  420, >= 130.0                 , Jan 29 16:00 , Jan 29 17:00 , Heat Index of 131° means heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.
+HI001, WxHourlyFo, HOUR_R  420, >= 130.0                 , Jan 30 10:00 , Jan 30 13:00 , Extreme heat will make heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.
+HI002, WxHourlyFo, DAY_RA  430, >= 130.0                 , Jan 30 10:00 , Jan 30 13:00 , Extreme heat will make heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.
+HI005, WxHourlyFo, HOUR_R  460, >= 10.0                  , Jan 29 12:00 , Jan 29 15:00 , Increased humidity will make the air feel warmer.
+HI005, WxHourlyFo, HOUR_R  460, >= 10.0                  , Jan 30 13:00 , Jan 30 15:00 , Increased humidity will make the air feel warmer.
+HI006, WxCurrentC, NOW     470, >= 10.0                  , Jan 29 11:00 , Jan 29 12:00 , Feels like temperature of 95°.
+PR001, WxCurrentC, NOW     150, Values of [8, 10]        , Jan 29 11:00 , Jan 29 12:00 , Icy roads may make travel hazardous. Use caution!
+PR002, WxHourlyFo, HOUR_R  160, Values of [8, 10]        , Jan 29 12:00 , Jan 29 13:00 , Icy roads may make travel hazardous. Use caution!
+PR004, WxHourlyFo, HOUR_R  180, >= 1.0                   , Jan 29 13:00 , Jan 29 14:00 , Rapidly accumulating snow of 2.50". Poor visibility may make travel difficult.
+PR005, WxHourlyFo, HOUR_R  196, 0.1 <= value < 1.0       , Jan 29 18:00 , Jan 29 19:00 , 0.10" of accumulating snow expected.
+PR007, WxHourlyFo, HOUR_R  192, 0.3 <= value < 1.0       , Jan 29 14:00 , Jan 29 15:00 , 0.50" of soaking rain expected.
+PR014, WxHourlyFo, HOUR_R  190, >= 1.0                   , Jan 29 15:00 , Jan 29 16:00 , Rainfall of 2.12" per hour will make driving difficult.
+PR100, WxHourlyFo, HOUR_R  194, 0.1 <= value < 0.3       , Jan 29 16:00 , Jan 29 17:00 , 0.20" of moderate rainfall expected.
+PR101, WxHourlyFo, HOUR_R  490, 0.01 <= value < 0.1      , Feb 01 06:00 , Feb 01 08:00 , 0.02" of light rain expected.
+PR101, WxHourlyFo, HOUR_R  490, 0.01 <= value < 0.1      , Feb 01 10:00 , Feb 01 18:00 , 0.13" of light rain expected.
+PR101, WxHourlyFo, HOUR_R  490, 0.01 <= value < 0.1      , Jan 29 18:00 , Jan 29 19:00 , 0.01" of light rain expected per hour.
+PR101, WxHourlyFo, HOUR_R  490, 0.01 <= value < 0.1      , Jan 31 14:00 , Jan 31 15:00 , 0.01" of light rain expected per hour.
+PR101, WxHourlyFo, HOUR_R  490, 0.01 <= value < 0.1      , Jan 31 17:00 , Jan 31 22:00 , 0.05" of light rain expected.
+TD001, WxHourlyFo, HOUR_R  920, <= -10.0                 , Jan 29 17:00 , Jan 29 18:00 , Quick cool down! The temperature will fall 67° from 4PM to 5PM.
+TD001, WxHourlyFo, HOUR_R  920, <= -10.0                 , Jan 30 10:00 , Jan 30 11:00 , Quick cool down! The temperature will fall 84° from 9AM to 10AM.
+TD001, WxHourlyFo, HOUR_R  920, <= -10.0                 , Jan 30 21:00 , Jan 30 22:00 , Quick cool down! The temperature will fall 26° from 8PM to 9PM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 29 17:00 , Jan 29 18:00 , Quick cool down! The temperature will fall 67° from 4PM to 5PM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 29 18:00 , Jan 29 19:00 , Quick cool down! The temperature will fall 0° from 5PM to 6PM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 30 10:00 , Jan 30 11:00 , Quick cool down! The temperature will fall 84° from 9AM to 10AM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 30 11:00 , Jan 30 12:00 , Quick cool down! The temperature will fall 0° from 10AM to 11AM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 30 21:00 , Jan 30 22:00 , Quick cool down! The temperature will fall 26° from 8PM to 9PM.
+TD002, WxHourlyFo, DAY     930, <= -10.0                 , Jan 30 22:00 , Jan 30 23:00 , Quick cool down! The temperature will fall 0° from 9PM to 10PM.
+TD003, WxHourlyFo, HOUR_R  940, >= 10.0                  , Jan 29 13:00 , Jan 29 14:00 , Quick warm up! The temperature will rise 10° from 12PM to 1PM.
+TD003, WxHourlyFo, HOUR_R  940, >= 10.0                  , Jan 29 15:00 , Jan 29 17:00 , Quick warm up! The temperature will rise 35° from 2PM to 3PM.
+TD003, WxHourlyFo, HOUR_R  940, >= 10.0                  , Jan 30 15:00 , Jan 30 16:00 , Quick warm up! The temperature will rise 84° from 2PM to 3PM.
+TD003, WxHourlyFo, HOUR_R  940, >= 10.0                  , Jan 30 18:00 , Jan 30 19:00 , Quick warm up! The temperature will rise 26° from 5PM to 6PM.
+TD003, WxHourlyFo, HOUR_R  940, >= 10.0                  , Jan 31 11:00 , Jan 31 12:00 , Quick warm up! The temperature will rise 10° from 10AM to 11AM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 29 13:00 , Jan 29 14:00 , Quick warm up! The temperature will rise 10° from 12PM to 1PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 29 14:00 , Jan 29 15:00 , Quick warm up! The temperature will rise 5° from 1PM to 2PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 29 15:00 , Jan 29 16:00 , Quick warm up! The temperature will rise 35° from 2PM to 3PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 29 16:00 , Jan 29 17:00 , Quick warm up! The temperature will rise 101° from 3PM to 4PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 29 17:00 , Jan 29 18:00 , Quick warm up! The temperature will rise 67° from 4PM to 5PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 30 15:00 , Jan 30 16:00 , Quick warm up! The temperature will rise 84° from 2PM to 3PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 30 16:00 , Jan 30 17:00 , Quick warm up! The temperature will rise 0° from 3PM to 4PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 30 18:00 , Jan 30 19:00 , Quick warm up! The temperature will rise 26° from 5PM to 6PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 30 19:00 , Jan 30 20:00 , Quick warm up! The temperature will rise 0° from 6PM to 7PM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 31 11:00 , Jan 31 12:00 , Quick warm up! The temperature will rise 10° from 10AM to 11AM.
+TD004, WxHourlyFo, DAY     950, >= 10.0                  , Jan 31 12:00 , Jan 31 13:00 , Quick warm up! The temperature will rise 0° from 11AM to 12PM.
+TH002, WxHourlyFo, HOUR_R  720, > 0.0                    , Jan 29 16:00 , Jan 29 17:00 , A new record high temperature is likely. The previous record was 86° in 1991.
+TH002, WxHourlyFo, HOUR_R  720, > 0.0                    , Jan 30 18:00 , Jan 30 21:00 , A new record high temperature is likely. The previous record is 85° which happened in 1991.
+TH103, WxHourlyFo, HOUR_R  830, >= 15.0                  , Jan 29 16:00 , Jan 29 17:00 , The temperature is unseasonably warm! For 131°, the average temperature over the last 30 years is 75°.
+TH103, WxHourlyFo, HOUR_R  830, >= 15.0                  , Jan 30 18:00 , Jan 30 21:00 , The temperature is unseasonably warm! The average temperature over the last 30 years is about 90°.
+TH105, WxHourlyFo, HOUR_P  900, 0.0 < value < 11.0       , Feb 01 09:00 , Feb 01 10:00 , The high temperature will occur near 9AM.
+TH105, WxHourlyFo, HOUR_P  900, 0.0 < value < 11.0       , Feb 05 10:00 , Feb 05 11:00 , The high temperature will occur near 10AM.
+TL002, WxHourlyFo, HOUR_R  780, <0.0                     , Jan 29 12:00 , Jan 29 16:00 , A new record low temperature is likely. The previous record is 45° which happened in 1940.
+TL002, WxHourlyFo, HOUR_R  780, <0.0                     , Jan 30 10:00 , Jan 30 15:00 , A new record low temperature is likely. The previous record is 47° which happened in 1940.
+TL103, WxHourlyFo, HOUR_R  860, <= -15.0                 , Jan 29 12:00 , Jan 29 16:00 , The temperature is unseasonably cold! The average temperature over the last 30 years is -20°.
+TL103, WxHourlyFo, HOUR_R  860, <= -15.0                 , Jan 30 10:00 , Jan 30 15:00 , The temperature is unseasonably cold! The average temperature over the last 30 years is -20°.
+W001 , WxCurrentC, NOW      10, >= 157.0                 , Jan 29 11:00 , Jan 29 12:00 , The wind speed of 158 mph has reached Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.
+W102 , WxHourlyFo, HOUR_R  399, 40.0 <= value < 74.0     , Jan 29 12:00 , Jan 29 14:00 , High wind speeds. Bring inside or secure any loose outside items which could be carried by the wind. Driving in trucks and buses is difficult.
+W102 , WxHourlyFo, HOUR_R  399, 40.0 <= value < 74.0     , Jan 30 10:00 , Jan 30 15:00 , High wind speeds. Bring inside or secure any loose outside items which could be carried by the wind. Driving in trucks and buses is difficult.
+W103 , WxHourlyFo, DAY_RA  390, 40.0 <= value < 74.0     , Jan 30 10:00 , Jan 30 15:00 , High wind speeds. Bring inside or secure any loose outside items which could be carried by the wind. Driving in trucks and buses is difficult.
+W105 , WxHourlyFo, HOUR_R  550, 30.0 <= value < 40.0     , Jan 29 14:00 , Jan 29 15:00 , Wind speed: 30 mph. Small items outside could be blown around by the wind. Driving in trucks and buses could be difficult.
+W108 , WxHourlyFo, HOUR_R  580, 15.0 <= value < 30.0     , Feb 01 09:00 , Feb 02 15:00 , Breezy
+W108 , WxHourlyFo, HOUR_R  580, 15.0 <= value < 30.0     , Feb 02 17:00 , Feb 02 18:00 , Breezy
+W108 , WxHourlyFo, HOUR_R  580, 15.0 <= value < 30.0     , Jan 29 15:00 , Jan 30 07:00 , Breezy
+W109 , WxHourlyFo, DAY_RA  590, 15.0 <= value < 30.0     , Feb 01 09:00 , Feb 02 15:00 , Breezy
+W109 , WxHourlyFo, DAY_RA  590, 15.0 <= value < 30.0     , Jan 29 15:00 , Jan 30 07:00 , Breezy
+WC002, WxHourlyFo, HOUR_R  320, <= 5.0                   , Jan 29 12:00 , Jan 29 13:00 , Extreme wind chill of 64°F means frostbite could occur in less than 5 minutes! Minimize time outdoors, wear multiple layers, and stay dry.
+WC002, WxHourlyFo, HOUR_R  320, <= 5.0                   , Jan 30 10:00 , Jan 30 15:00 , Extreme wind chill! Frostbite could occur in less than 5 minutes. Minimize time outdoors, wear multiple layers, and stay dry.
+WC003, WxHourlyFo, DAY_RA  330, <= 5.0                   , Jan 30 10:00 , Jan 30 15:00 , Extreme wind chill! Frostbite could occur in less than 5 minutes. Minimize time outdoors, wear multiple layers, and stay dry.
+WC005, WxHourlyFo, HOUR_R  350, 5.0 < value <= 10.0      , Jan 29 13:00 , Jan 29 15:00 , Dangerous wind chill! Frostbite could occur in less than 10 minutes. Minimize time outdoors, wear multiple layers, and stay dry.
+WC010, WxHourlyFo, HOUR_R  400, <= -10.0                 , Jan 29 15:00 , Jan 29 16:00 , Feels Like Temperature of 19°. Don't forget a hat! More than half of your body heat is lost when not wearing a hat.
+WC010, WxHourlyFo, HOUR_R  400, <= -10.0                 , Jan 30 18:00 , Jan 30 21:00 , Wind chill will make the air feel cooler. Don't forget a hat! More than half of your body heat is lost when not wearing a hat.

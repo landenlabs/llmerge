@@ -1,0 +1,110 @@
+DP006, dewPoint, hourly, 650, rule, hourRange, 2020-01-31 20:00:00 ,2020-02-01 21:59:59, 3PM to 4PM Sat 2/01
+DP006, dewPoint, hourly, 650, rule, hourRange, 2020-02-05 06:00:00 ,2020-02-07 02:59:59, 1AM to 9PM Thu 2/06
+DP007, dewPoint, hourly, 660, rule, dayRange, 2020-01-31 05:00:00 ,2020-02-02 04:59:59, Fri 1/31 to Sat 2/01
+DP007, dewPoint, hourly, 660, rule, dayRange, 2020-02-05 05:00:00 ,2020-02-07 04:59:59, Wed 2/05 to Thu 2/06
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-01-31 16:00:00 ,2020-01-31 19:59:59, 11 to 2PM
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-02-01 22:00:00 ,2020-02-02 01:59:59, 5 to 8PM
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-02-04 09:00:00 ,2020-02-05 05:59:59, 4AM to 12AM Wed 2/05
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-02-07 03:00:00 ,2020-02-08 00:59:59, 10PM to 7PM Fri 2/07
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-02-09 11:00:00 ,2020-02-09 11:59:59, 6AM
+DP008, dewPoint, hourly, 670, rule, hourRange, 2020-02-09 13:00:00 ,2020-02-13 16:59:59, 8AM to 11AM Thu 2/13
+DP009, dewPoint, hourly, 680, rule, dayRange, 2020-01-31 05:00:00 ,2020-02-02 04:59:59, Fri 1/31 to Sat 2/01
+DP009, dewPoint, hourly, 680, rule, dayRange, 2020-02-04 05:00:00 ,2020-02-08 04:59:59, Tue 2/04 to Fri 2/07
+DP009, dewPoint, hourly, 680, rule, dayRange, 2020-02-09 05:00:00 ,2020-02-14 04:59:59, Sun 2/09 to Thu 2/13
+DP010, dewPoint, hourly, 690, rule, hourRange, 2020-02-02 02:00:00 ,2020-02-02 08:59:59, 9PM to 3AM Sun 2/02
+DP010, dewPoint, hourly, 690, rule, hourRange, 2020-02-03 22:00:00 ,2020-02-04 08:59:59, 5PM to 3AM Tue 2/04
+DP010, dewPoint, hourly, 690, rule, hourRange, 2020-02-08 01:00:00 ,2020-02-09 10:59:59, 8PM to 5AM Sun 2/09
+DP010, dewPoint, hourly, 690, rule, hourRange, 2020-02-09 12:00:00 ,2020-02-09 12:59:59, 7AM
+DP011, dewPoint, hourly, 700, rule, dayRange, 2020-02-01 05:00:00 ,2020-02-05 04:59:59, Sat 2/01 to Tue 2/04
+DP011, dewPoint, hourly, 700, rule, dayRange, 2020-02-07 05:00:00 ,2020-02-10 04:59:59, Fri 2/07 to Sun 2/09
+HI001, heatIndex, hourly, 420, rule, hourRange, 2020-01-29 21:00:00 ,2020-01-29 21:59:59, 4PM
+HI001, heatIndex, hourly, 420, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 17:59:59, 10 to 12PM
+HI005, heatIndex, hourly, 460, rule, hourRange, 2020-01-29 16:00:00 ,2020-01-29 20:59:59, 11 to 3PM
+HI005, heatIndex, hourly, 460, rule, hourRange, 2020-01-30 18:00:00 ,2020-01-30 19:59:59, 1 to 2PM
+HI006, heatIndex, currents, 470, rule, now, 2020-01-29 16:34:39 ,2020-01-29 17:04:39, Feels like temperature of 95°F.
+PR001, precipitation, currents, 150, rule, now, 2020-01-29 16:34:39 ,2020-01-29 17:04:39, Icy roads may make travel hazardous. Use caution!
+PR002, precipitation, hourly, 160, rule, hourRange, 2020-01-29 17:00:00 ,2020-01-29 17:59:59, 12 to 1PM
+PR004, precipitation, hourly, 180, rule, hourRange, 2020-01-29 18:00:00 ,2020-01-29 18:59:59, 1 to 2PM
+PR005, precipitation, hourly, 196, rule, hourRange, 2020-01-29 23:00:00 ,2020-01-29 23:59:59, 6 to 7PM
+PR007, precipitation, hourly, 192, rule, hourRange, 2020-01-29 19:00:00 ,2020-01-29 19:59:59, 2 to 3PM
+PR014, precipitation, hourly, 190, rule, hourRange, 2020-01-29 20:00:00 ,2020-01-29 20:59:59, 3 to 4PM
+PR016, precipitation, daily, 217, rule, dayRange, 2020-01-30 04:00:00 ,2020-02-04 03:59:59, Thu 1/30 to Mon 2/03
+PR016, precipitation, daily, 217, rule, dayRange, 2020-02-05 04:00:00 ,2020-02-09 03:59:59, Wed 2/05 to Sat 2/08
+PR100, precipitation, hourly, 194, rule, hourRange, 2020-01-29 21:00:00 ,2020-01-29 21:59:59, 4 to 5PM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-01-29 23:00:00 ,2020-01-29 23:59:59, 6 to 7PM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-01-31 19:00:00 ,2020-01-31 19:59:59, 2 to 3PM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-01-31 22:00:00 ,2020-02-01 02:59:59, 5 to 10PM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-01 11:00:00 ,2020-02-01 12:59:59, 6 to 8AM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-01 15:00:00 ,2020-02-01 22:59:59, 10 to 6PM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-07 00:00:00 ,2020-02-08 08:59:59, 7PM to 4AM Sat 2/08
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-09 06:00:00 ,2020-02-09 07:59:59, 1 to 3AM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-09 10:00:00 ,2020-02-09 12:59:59, 5 to 8AM
+PR101, precipitation, hourly, 490, rule, hourRange, 2020-02-10 03:00:00 ,2020-02-10 05:59:59, 10PM to 1AM Mon 2/10
+TD001, temperatureDelta, hourly, 920, rule, hourRange, 2020-01-29 22:00:00 ,2020-01-29 22:59:59, 5PM
+TD001, temperatureDelta, hourly, 920, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 15:59:59, 10AM
+TD001, temperatureDelta, hourly, 920, rule, hourRange, 2020-01-31 02:00:00 ,2020-01-31 02:59:59, 9PM
+TD002, temperatureDelta, hourly, 930, rule, day, 2020-01-29 22:00:00 ,2020-01-29 22:59:59, Wed 1/29
+TD002, temperatureDelta, hourly, 930, rule, day, 2020-01-30 15:00:00 ,2020-01-30 15:59:59, Thu 1/30
+TD002, temperatureDelta, hourly, 930, rule, day, 2020-01-31 02:00:00 ,2020-01-31 02:59:59, Thu 1/30
+TD003, temperatureDelta, hourly, 940, rule, hourRange, 2020-01-29 18:00:00 ,2020-01-29 18:59:59, 1PM
+TD003, temperatureDelta, hourly, 940, rule, hourRange, 2020-01-29 20:00:00 ,2020-01-29 21:59:59, 3 to 4PM
+TD003, temperatureDelta, hourly, 940, rule, hourRange, 2020-01-30 20:00:00 ,2020-01-30 20:59:59, 3PM
+TD003, temperatureDelta, hourly, 940, rule, hourRange, 2020-01-30 23:00:00 ,2020-01-30 23:59:59, 6PM
+TD003, temperatureDelta, hourly, 940, rule, hourRange, 2020-01-31 16:00:00 ,2020-01-31 16:59:59, 11AM
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-29 18:00:00 ,2020-01-29 18:59:59, Wed 1/29
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-29 20:00:00 ,2020-01-29 20:59:59, Wed 1/29
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-29 21:00:00 ,2020-01-29 21:59:59, Wed 1/29
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-30 20:00:00 ,2020-01-30 20:59:59, Thu 1/30
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-30 23:00:00 ,2020-01-30 23:59:59, Thu 1/30
+TD004, temperatureDelta, hourly, 950, rule, day, 2020-01-31 16:00:00 ,2020-01-31 16:59:59, Fri 1/31
+TH002, temperatureHigher, hourly, 720, rule, hourRange, 2020-01-29 21:00:00 ,2020-01-29 21:59:59, 4PM
+TH002, temperatureHigher, hourly, 720, rule, hourRange, 2020-01-30 23:00:00 ,2020-01-31 01:59:59, 6 to 8PM
+TH003, temperatureHigher, daily, 730, rule, day, 2020-02-06 04:00:00 ,2020-02-07 03:59:59, Thu 2/06
+TH003, temperatureHigher, daily, 730, rule, day, 2020-02-07 04:00:00 ,2020-02-08 03:59:59, Fri 2/07
+TH003, temperatureHigher, daily, 730, rule, day, 2020-02-08 04:00:00 ,2020-02-09 03:59:59, Sat 2/08
+TH103, temperatureHigher, hourly, 830, rule, hourRange, 2020-01-29 21:00:00 ,2020-01-29 21:59:59, 4PM
+TH103, temperatureHigher, hourly, 830, rule, hourRange, 2020-01-30 23:00:00 ,2020-01-31 01:59:59, 6 to 8PM
+TH104, temperatureHigher, daily, 840, rule, dayRange, 2020-02-07 04:00:00 ,2020-02-09 03:59:59, Fri 2/07 to Sat 2/08
+TH105, temperatureHigher, hourly, 900, rule, hourPerDay, 2020-02-01 14:00:00 ,2020-02-01 14:59:59, 9AM
+TH105, temperatureHigher, hourly, 900, rule, hourPerDay, 2020-02-02 05:00:00 ,2020-02-02 05:59:59, 12AM
+TH105, temperatureHigher, hourly, 900, rule, hourPerDay, 2020-02-05 15:00:00 ,2020-02-05 15:59:59, 10AM
+TH105, temperatureHigher, hourly, 900, rule, hourPerDay, 2020-02-07 05:00:00 ,2020-02-07 05:59:59, 12AM
+TH105, temperatureHigher, hourly, 900, rule, hourPerDay, 2020-02-13 05:00:00 ,2020-02-13 05:59:59, 12AM
+TH106, temperatureHigher, hourly, 910, rule, day, 2020-02-01 14:00:00 ,2020-02-01 14:59:59, Sat 2/01
+TH106, temperatureHigher, hourly, 910, rule, day, 2020-02-02 05:00:00 ,2020-02-02 05:59:59, Sun 2/02
+TH106, temperatureHigher, hourly, 910, rule, day, 2020-02-05 15:00:00 ,2020-02-05 15:59:59, Wed 2/05
+TH106, temperatureHigher, hourly, 910, rule, day, 2020-02-07 05:00:00 ,2020-02-07 05:59:59, Fri 2/07
+TH106, temperatureHigher, hourly, 910, rule, day, 2020-02-13 05:00:00 ,2020-02-13 05:59:59, Thu 2/13
+TL002, temperatureLower, hourly, 780, rule, hourRange, 2020-01-29 16:00:00 ,2020-01-29 20:59:59, 11 to 3PM
+TL002, temperatureLower, hourly, 780, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 19:59:59, 10 to 2PM
+TL003, temperatureLower, daily, 790, rule, day, 2020-02-02 04:00:00 ,2020-02-03 03:59:59, Sun 2/02
+TL003, temperatureLower, daily, 790, rule, day, 2020-02-04 04:00:00 ,2020-02-05 03:59:59, Tue 2/04
+TL101, temperatureLower, daily, 810, rule, day, 2020-02-04 04:00:00 ,2020-02-05 03:59:59, Tue 2/04
+TL103, temperatureLower, hourly, 860, rule, hourRange, 2020-01-29 16:00:00 ,2020-01-29 20:59:59, 11 to 3PM
+TL103, temperatureLower, hourly, 860, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 19:59:59, 10 to 2PM
+TL104, temperatureLower, daily, 870, rule, dayRange, 2020-02-02 04:00:00 ,2020-02-05 03:59:59, Sun 2/02 to Tue 2/04
+W001, wind, currents, 10, rule, now, 2020-01-29 16:34:39 ,2020-01-29 17:04:39, The wind speed of 158 mph has reached Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.
+W102, wind, hourly, 399, rule, hourRange, 2020-01-29 17:00:00 ,2020-01-29 18:59:59, 12 to 1PM
+W102, wind, hourly, 399, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 19:59:59, 10 to 2PM
+W103, wind, hourly, 390, rule, dayRange, 2020-01-30 05:00:00 ,2020-01-31 04:59:59, Thu 1/30 to Thu 1/30
+W105, wind, hourly, 550, rule, hourRange, 2020-01-29 19:00:00 ,2020-01-29 19:59:59, 2PM
+W108, wind, hourly, 580, rule, hourRange, 2020-01-29 16:00:00 ,2020-01-29 16:59:59, 11AM
+W108, wind, hourly, 580, rule, hourRange, 2020-01-29 20:00:00 ,2020-01-30 11:59:59, 3PM to 6AM Thu 1/30
+W108, wind, hourly, 580, rule, hourRange, 2020-02-01 14:00:00 ,2020-02-02 19:59:59, 9AM to 2PM Sun 2/02
+W108, wind, hourly, 580, rule, hourRange, 2020-02-02 22:00:00 ,2020-02-02 22:59:59, 5PM
+W108, wind, hourly, 580, rule, hourRange, 2020-02-07 12:00:00 ,2020-02-07 19:59:59, 7 to 2PM
+W108, wind, hourly, 580, rule, hourRange, 2020-02-07 21:00:00 ,2020-02-07 22:59:59, 4 to 5PM
+W108, wind, hourly, 580, rule, hourRange, 2020-02-09 11:00:00 ,2020-02-10 01:59:59, 6 to 8PM
+W108, wind, hourly, 580, rule, hourRange, 2020-02-10 03:00:00 ,2020-02-12 18:59:59, 10PM to 1PM Wed 2/12
+W109, wind, hourly, 590, rule, dayRange, 2020-01-29 05:00:00 ,2020-01-31 04:59:59, Wed 1/29 to Thu 1/30
+W109, wind, hourly, 590, rule, dayRange, 2020-02-01 05:00:00 ,2020-02-03 04:59:59, Sat 2/01 to Sun 2/02
+W109, wind, hourly, 590, rule, dayRange, 2020-02-07 05:00:00 ,2020-02-08 04:59:59, Fri 2/07 to Fri 2/07
+W109, wind, hourly, 590, rule, dayRange, 2020-02-09 05:00:00 ,2020-02-13 04:59:59, Sun 2/09 to Wed 2/12
+WC002, windChill, hourly, 320, rule, hourRange, 2020-01-29 17:00:00 ,2020-01-29 17:59:59, 12PM
+WC002, windChill, hourly, 320, rule, hourRange, 2020-01-30 15:00:00 ,2020-01-30 19:59:59, 10 to 2PM
+WC003, windChill, hourly, 330, rule, dayRange, 2020-01-30 05:00:00 ,2020-01-31 04:59:59, Thu 1/30 to Thu 1/30
+WC005, windChill, hourly, 350, rule, hourRange, 2020-01-29 16:00:00 ,2020-01-29 16:59:59, 11AM
+WC005, windChill, hourly, 350, rule, hourRange, 2020-01-29 18:00:00 ,2020-01-29 18:59:59, 1PM
+WC008, windChill, hourly, 380, rule, hourRange, 2020-01-29 19:00:00 ,2020-01-29 19:59:59, 2PM
+WC010, windChill, hourly, 400, rule, hourRange, 2020-01-29 20:00:00 ,2020-01-29 20:59:59, 3PM
+WC010, windChill, hourly, 400, rule, hourRange, 2020-01-30 23:00:00 ,2020-01-31 01:59:59, 6 to 8PM

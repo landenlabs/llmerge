@@ -68,6 +68,10 @@ class Diff {
     HashList hashList1;
     
     unsigned widths[2];     // maximum file text row width.
+    bool verbose;           // true show more output
+    std::string divider;    // used when not verbose output to split diff output rows.
+    std::string left;
+    std::string right;
     
     // Optional regular expression to compare or merge files
     std::vector<std::regex*> cmpRxP;
@@ -89,6 +93,8 @@ class Diff {
         scanRows(100),
         minMatch(3), maxMatch(6),
         width(0),
+        verbose(false),
+        divider(" || "),
         replaceList()
         {  }
     

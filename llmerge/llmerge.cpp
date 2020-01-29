@@ -84,28 +84,43 @@ void displayRowsSideBySide(
     const lldiff::StrList& fileLines1 = diffInfo.fileLines1;
     
     while (bRow0 < eRow0)   {
-        std::cout
-            << "[" << right << std::setw(3) << bRow0+1 << "]"
-            << left << std::setw(width) << fileLines0[bRow0]
-            << std::endl;
+        if (diffInfo.verbose) {
+            std::cout << "[" << right << std::setw(3) << bRow0+1 << "]" << left;
+        }
+        std::cout << std::setw(width) << fileLines0[bRow0];
+        if (!diffInfo.verbose) {
+            std::cout << diffInfo.divider << diffInfo.right;
+        }
+        std::cout << std::endl;
         bRow0++;
     }
     while (bRow1 < eRow1)   {
-        std::cout
-                << "[xxx]" << std::setw(width) << " " << " xx "
-                << "[" << right << std::setw(3) << bRow1+1 << "]"
-                << left << std::setw(width) << fileLines1[bRow1]
-                << std::endl;
+        if (diffInfo.verbose) {
+            std::cout
+                    << "[xxx]" << std::setw(width) << diffInfo.left << " xx "
+                    << "[" << right << std::setw(3) << bRow1+1 << "]" << left ;
+        } else {
+            std::cout << std::setw(width) <<diffInfo.left << diffInfo.divider;
+        }
+        std::cout << std::setw(width) << fileLines1[bRow1]  << std::endl;
         bRow1++;
     }
     
     if (bRow0 == eRow0 && bRow1 == eRow1)  {
-        std::cout
-                << "[" << right << std::setw(3) << bRow0+1 << "]"
-                << left << std::setw(width) << fileLines0[bRow0] << " || "
-                << "[" << right << std::setw(3) << bRow1+1 << "]"
-                << left << std::setw(width) << fileLines1[bRow1]
-                << std::endl;
+        if (diffInfo.verbose) {
+            std::cout
+                    << "[" << right << std::setw(3) << bRow0+1 << "]"
+                    << left << std::setw(width) << fileLines0[bRow0] << diffInfo.divider
+                    << "[" << right << std::setw(3) << bRow1+1 << "]"
+                    << left << std::setw(width) << fileLines1[bRow1]
+                    << std::endl;
+        } else {
+            std::cout
+                   << left << std::setw(width) << fileLines0[bRow0]
+                   << diffInfo.divider
+                   << left << std::setw(width) << fileLines1[bRow1]
+                   << std::endl;
+        }
     }
 }
 
@@ -264,8 +279,20 @@ int main(int argc, char* argv[]) {
                     diffInfo.mergeRxP[0] = diffInfo.mergeRxP[1] = regP;
                 }
                 break;
-              case 'r':
+              case 'r': // Replace list of regex to execute on input lines before compare.
                 diffInfo.replaceList.push_back(std::pair<regex,const char*>(*regP, value2));
+                break;
+              case 'v': // Verbose, defaults false
+                diffInfo.verbose = true;
+                break;
+              case 'D': // Divider, defaults to ","
+                diffInfo.divider = value1+1;
+                break;
+              case 'L': // Left when row is missing
+                diffInfo.left = value1+1;
+                break;
+             case 'R': // Right when row is missing
+                diffInfo.right = value1+1;
                 break;
             }
             
