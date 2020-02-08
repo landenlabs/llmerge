@@ -26,6 +26,7 @@
 		B95082F923D2BD0D00FE9C2C /* llmerge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = llmerge; sourceTree = BUILT_PRODUCTS_DIR; };
 		B950830323D2BD9300FE9C2C /* llmerge.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = llmerge.cpp; sourceTree = "<group>"; };
 		B950830623D4B3D700FE9C2C /* lldiff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lldiff.h; sourceTree = "<group>"; };
+		B96E67A323E7D31A001BE252 /* Colors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Colors.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		B95082FB23D2BD0D00FE9C2C /* llmerge */ = {
 			isa = PBXGroup;
 			children = (
+				B96E67A323E7D31A001BE252 /* Colors.h */,
 				B950830323D2BD9300FE9C2C /* llmerge.cpp */,
 				B950830623D4B3D700FE9C2C /* lldiff.h */,
 			);

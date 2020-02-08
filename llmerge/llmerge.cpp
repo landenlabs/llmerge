@@ -28,47 +28,58 @@
 //
 
 
+#include "lldiff.h"
+#include "Colors.h"
+using namespace std;
+
 const char* HELP =
 "Merge (compare) text files\n"
-"  Build: " __DATE__ "\n"
-"  By: Dennis Lang  landenlabs.com\n"
+"  _P_Build:_X_ " __DATE__ "\n"
+"  _P_By:_X_    Dennis Lang  landenlabs.com \n"
 "\n"
-"Command:\n"
+"_P_Command:_X_\n"
 "  llmerge [options] <file1> <file2>\n"
 "\n"
 "  ; Compare text files line-by-line:\n"
-"     llmerge ([-c=<regEx>] |[-c1=<regEx1>] [-c2=<regEx2>])  <file1> <file2> \n"
-"  Example:\n"
+"     llmerge ([-_r_c=<regEx>] |[-_r_c1=<regEx1>] [-_r_c2=<regEx2>])  <file1> <file2> \n"
+"  _B_Example:_X_\n"
 "     llmerge file1.xml file2.xml\n"
-"     llmerge llmerge '-c=.*tag=([^ ]+).*' file1.xml file2.xml \n"
-"     llmerge llmerge '-c=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
+"     llmerge llmerge '-_r_c=.*tag=([^ ]+).*' file1.xml file2.xml \n"
+"     llmerge llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
 "\n"
 "  ; Merge text files:\n"
-"      llmerge [-c1=<regEx1>] [-c2=<regEx2>] (-m|-m1=<regMergeEx1> -m2=<regMergeEx2>) <file1> <file2> \n"
-"  Example:\n"
-"      llmerge -m file1.xml file2.xml \n"
-"      llmerge '-m=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
-"      llmerge '-c=.*tag1=([^ ]+).*' '-m=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
-"      llmerge '-c=.*tag1=([^ ]+).*tag2=([^ ]+).*'  file1.xml file2.xml \n"
+"      llmerge [-_r_c1=<regEx1>] [-_r_c2=<regEx2>] (-_r_m|-_r_m1=<regMergeEx1> -_r_m2=<regMergeEx2>) <file1> <file2> \n"
+"  _B_Example:_X_\n"
+"      llmerge -_r_m file1.xml file2.xml \n"
+"      llmerge '-_r_m=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
+"      llmerge '-_r_c=.*tag1=([^ ]+).*' '-_r_m=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
+"      llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*'  file1.xml file2.xml \n"
 "\n"
-"Where:\n"
-"  -c Sets the optional compare extraction regular expression which must have one or more capture groups.\n"
-"  -m Sets the optional merge extraction regular expression which must have one or more capture groups.\n"
-"\n"
+"_P_Where:_X_\n"
+"  -_r_c Sets the optional compare extraction regular expression which must have one or more capture groups.\n"
+"  -_r_m Sets the optional merge extraction regular expression which must have one or more capture groups.\n"
 "   Regular expression must include a group to extract, such as '.*Something([^ ]+).*'  \n"
 "\n"
 "  During file load optionally replace text using regular expression groups:\n"
-"      -r=<regex1>;replace1  -r=<regex2>;replace2 ... \n"
-"  Example:\n"
-"      '-r=.*(OldWord).*;NewWord'   \n"
-"Links:\n"
+"      -_r_r=<regex1>;replace1  -r=<regex2>;replace2 ... \n"
+"  _B_Example:_X_\n"
+"      '-_r_r=.*(OldWord).*;NewWord'   \n"
+"\n"
+"  -_r_D Set divider displayed in side-by-side compare, defaults to ',' \n"
+"  -_r_L Set LEFT side when no match available. Useful if generating fixed column output such as CSV \n"
+"  -_r_R Set RIGHT side when no match available. Useful if generating fixed column output such as CSV \n"
+"  _B_Example:_X_\n"
+"      llmerge '-_r_c=([A-Z]+[0-9]+),.*' '-_r_L=,,,,,,' -_r_D=, and.srt ios.srt > compare-android-ios.csv \n"
+"\n"
+"_P_Links:_X_\n"
 "  https://www.regular-expressions.info/refcapture.html \n"
 "\n\n";
 
 
-#include "lldiff.h"
 
-using namespace std;
+// Forward declaration
+void init();
+
 
 // ------------------------------------------------------------------------------------------------
 // Display text rows side-by-side
@@ -322,10 +333,33 @@ int main(int argc, char* argv[]) {
                 std::cerr << "Failed to load text rows from:" << diffInfo.filenames[1] << std::endl;
         }
     } else {
-        std::cerr << HELP;
+        std::cerr << Colors::colorize(HELP);
     }
     
     return 0;
 }
 
 
+// ================================================================================================
+void init() {
+#ifdef HAVE_WIN
+    // Set output mode to handle virtual terminal sequences
+    HANDLE hOut = GetStdHandle(STD_OUTPUT_HANDLE);
+    if (hOut == INVALID_HANDLE_VALUE)
+    {
+        exit( GetLastError());
+    }
+
+    DWORD dwMode = 0;
+    if (!GetConsoleMode(hOut, &dwMode))
+    {
+        exit( GetLastError());
+    }
+
+    dwMode |= ENABLE_VIRTUAL_TERMINAL_PROCESSING;
+    if (!SetConsoleMode(hOut, dwMode))
+    {
+        exit( GetLastError());
+    }
+#endif
+}
