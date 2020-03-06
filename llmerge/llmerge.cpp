@@ -44,8 +44,8 @@ const char* HELP =
 "     llmerge ([-_r_c=<regEx>] |[-_r_c1=<regEx1>] [-_r_c2=<regEx2>])  <file1> <file2> \n"
 "  _B_Example:_X_\n"
 "     llmerge file1.xml file2.xml\n"
-"     llmerge llmerge '-_r_c=.*tag=([^ ]+).*' file1.xml file2.xml \n"
-"     llmerge llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
+"     llmerge '-_r_c=.*tag=([^ ]+).*' file1.xml file2.xml \n"
+"     llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
 "\n"
 "  ; Merge text files:\n"
 "      llmerge [-_r_c1=<regEx1>] [-_r_c2=<regEx2>] (-_r_m|-_r_m1=<regMergeEx1> -_r_m2=<regMergeEx2>) <file1> <file2> \n"
@@ -56,7 +56,8 @@ const char* HELP =
 "      llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*'  file1.xml file2.xml \n"
 "\n"
 "_P_Where:_X_\n"
-"  -_r_c Sets the optional compare extraction regular expression which must have one or more capture groups.\n"
+"  -_r_c Sets the optional compare extraction regular expression which must have one or more capture groups\n"
+"        and must match entire row, so add .* at front or end of pattern.\n"
 "  -_r_m Sets the optional merge extraction regular expression which must have one or more capture groups.\n"
 "   Regular expression must include a group to extract, such as '.*Something([^ ]+).*'  \n"
 "\n"
@@ -65,7 +66,13 @@ const char* HELP =
 "  _B_Example:_X_\n"
 "      '-_r_r=.*(OldWord).*;NewWord'   \n"
 "\n"
-"  -_r_D Set divider displayed in side-by-side compare, defaults to ',' \n"
+"  -_r_N# No line output from file '#' when merging and both files have identical matching keys \n"
+"  _B_Example:_X_\n"
+"      llmerge '-_r_c=.*tag=([^ ]+).*' -_r_m file1.xml file2.xml      \n"
+"      llmerge -N0 '-_r_c=.*tag=([^ ]+).*' -_r_m file1.xml file2.xml \n"
+"      llmerge -N1 '-_r_c=.*tag=([^ ]+).*' -_r_m file1.xml file2.xml \n"
+"\n"
+"  -_r_D Set divider displayed in side-by-side compare, defaults to '||' \n"
 "  -_r_L Set LEFT side when no match available. Useful if generating fixed column output such as CSV \n"
 "  -_r_R Set RIGHT side when no match available. Useful if generating fixed column output such as CSV \n"
 "  _B_Example:_X_\n"
@@ -188,16 +195,25 @@ void mergeRowsSideBySide(
     const lldiff::StrList& fileLines1 = diffInfo.fileLines1;
     
     while (bRow0 < eRow0)   {
-        std::cout << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
+        if (diffInfo.mergeOut0) {
+            std::cout << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
+        }
         bRow0++;
     }
     while (bRow1 < eRow1)   {
-        std::cout << diffInfo.getMerge(fileLines1[bRow1], diffInfo.mergeRxP[1]) << std::endl;
+        if (diffInfo.mergeOut1) {
+            std::cout << diffInfo.getMerge(fileLines1[bRow1], diffInfo.mergeRxP[1]) << std::endl;
+        }
         bRow1++;
     }
     
     if (bRow0 == eRow0 && bRow1 == eRow1)  {
-        std::cout  << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
+        if (diffInfo.mergeOut0) {
+            std::cout  << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
+        }
+        if (diffInfo.mergeOut1) {
+            std::cout  << diffInfo.getMerge(fileLines1[bRow1], diffInfo.mergeRxP[1]) << std::endl;
+        }
     }
 }
 
@@ -236,7 +252,22 @@ void mergeTextDiles(lldiff::Diff& diffInfo)
               dsp0, (lldiff::RowNum)diffInfo.fileLines0.size()-1,
               dsp1, (lldiff::RowNum)diffInfo.fileLines1.size()-1);
 }
- 
+
+// ================================================================================================
+// Runtime switch verification
+
+bool verify(const char* msg, const void* p1) {
+    if (p1 != nullptr) {
+        std::cerr << "Missing parameter for option " << msg << std::endl;
+        return false;
+    }
+    return true;
+}
+
+bool verify(const char* msg, const regex* r1, const char* p1) {
+    return verify(msg, p1) && verify(msg, r1);
+}
+
 
 // ================================================================================================
 int main(int argc, char* argv[]) {
@@ -252,6 +283,7 @@ int main(int argc, char* argv[]) {
     for (; argIdx < argc; argIdx++) {
         if (argv[argIdx][0] == '-') {
             const char* arg = argv[argIdx]+1;
+            value2 = nullptr;
             if ((value1 = strchr(arg, '=')) != nullptr) {
                 // -c1=regex
                 // -r=regex;replace
@@ -291,19 +323,36 @@ int main(int argc, char* argv[]) {
                 }
                 break;
               case 'r': // Replace list of regex to execute on input lines before compare.
-                diffInfo.replaceList.push_back(std::pair<regex,const char*>(*regP, value2));
+                if (verify("r", regP, value2)) {
+                    diffInfo.replaceList.push_back(std::pair<regex,const char*>(*regP, value2));
+                }
                 break;
               case 'v': // Verbose, defaults false
                 diffInfo.verbose = true;
                 break;
               case 'D': // Divider, defaults to ","
-                diffInfo.divider = value1+1;
+                if (verify("D", value1)) {
+                    diffInfo.divider = value1+1;
+                }
                 break;
               case 'L': // Left when row is missing
-                diffInfo.left = value1+1;
+                if (verify("L", value1)) {
+                    diffInfo.left = value1+1;
+                }
                 break;
-             case 'R': // Right when row is missing
-                diffInfo.right = value1+1;
+              case 'n':  // No line out for file 'n' when merging
+              case 'N':  // -n1 or -N1
+                if (arg[1] == '0') {
+                    diffInfo.mergeOut0 = false;
+                }
+                if (arg[1] == '1') {
+                    diffInfo.mergeOut1 = false;
+                }
+                break;
+              case 'R': // Right when row is missing
+                if (verify("R", value1)) {
+                    diffInfo.right = value1+1;
+                }
                 break;
             }
             

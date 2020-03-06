@@ -73,6 +73,9 @@ class Diff {
     std::string left;
     std::string right;
     
+    bool mergeOut0;         // If merging, output from file #0
+    bool mergeOut1;         // If merging, output from file #1
+    
     // Optional regular expression to compare or merge files
     std::vector<std::regex*> cmpRxP;
     std::vector<std::regex*> mergeRxP;
@@ -95,7 +98,9 @@ class Diff {
         width(0),
         verbose(false),
         divider(" || "),
-        replaceList()
+        replaceList(),
+        mergeOut0(true),
+        mergeOut1(true)
         {  }
     
     // Read file into vector, optionally replace fields and extract keys, hash code result.
