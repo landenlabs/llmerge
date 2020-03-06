@@ -40,14 +40,14 @@ const char* HELP =
 "_P_Command:_X_\n"
 "  llmerge [options] <file1> <file2>\n"
 "\n"
-"  ; Compare text files line-by-line:\n"
+"  ; Compare text files side-by-side:\n"
 "     llmerge ([-_r_c=<regEx>] |[-_r_c1=<regEx1>] [-_r_c2=<regEx2>])  <file1> <file2> \n"
 "  _B_Example:_X_\n"
 "     llmerge file1.xml file2.xml\n"
 "     llmerge '-_r_c=.*tag=([^ ]+).*' file1.xml file2.xml \n"
 "     llmerge '-_r_c=.*tag1=([^ ]+).*tag2=([^ ]+).*' file1.xml file2.xml \n"
 "\n"
-"  ; Merge text files:\n"
+"  ; Merge text files line by line:\n"
 "      llmerge [-_r_c1=<regEx1>] [-_r_c2=<regEx2>] (-_r_m|-_r_m1=<regMergeEx1> -_r_m2=<regMergeEx2>) <file1> <file2> \n"
 "  _B_Example:_X_\n"
 "      llmerge -_r_m file1.xml file2.xml \n"
@@ -183,8 +183,10 @@ void compareTextFiles(const lldiff::Diff& diffInfo)
 }
 
 // ------------------------------------------------------------------------------------------------
-// Merge text rows into single output row.
-void mergeRowsSideBySide(
+// Merge text rows into single or doulbe output rows.
+// If keys are unique a single row is output
+// If keys are identical then optionally output both rows, one or none.
+void mergeRowByRow(
         const lldiff::Diff& diffInfo,
         lldiff::RowNum bRow0,   // begin row file 0
         lldiff::RowNum  eRow0,  //   end row file 0
@@ -195,23 +197,23 @@ void mergeRowsSideBySide(
     const lldiff::StrList& fileLines1 = diffInfo.fileLines1;
     
     while (bRow0 < eRow0)   {
-        if (diffInfo.mergeOut0) {
+        if (diffInfo.uniqueOut0) {
             std::cout << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
         }
         bRow0++;
     }
     while (bRow1 < eRow1)   {
-        if (diffInfo.mergeOut1) {
+        if (diffInfo.uniqueOut1) {
             std::cout << diffInfo.getMerge(fileLines1[bRow1], diffInfo.mergeRxP[1]) << std::endl;
         }
         bRow1++;
     }
     
     if (bRow0 == eRow0 && bRow1 == eRow1)  {
-        if (diffInfo.mergeOut0) {
+        if (diffInfo.identicalOut0) {
             std::cout  << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
         }
-        if (diffInfo.mergeOut1) {
+        if (diffInfo.identicalOut1) {
             std::cout  << diffInfo.getMerge(fileLines1[bRow1], diffInfo.mergeRxP[1]) << std::endl;
         }
     }
@@ -235,7 +237,7 @@ void mergeTextDiles(lldiff::Diff& diffInfo)
             lldiff::RowMatch match1 = diffInfo.rowMatches1(idx, row0, row1); // TODO - use rowMatch instead of row0, row1
             rowMatch = (match0.matchedRows >= match1.matchedRows) ? match0 : match1;
             if (rowMatch.matchedRows > diffInfo.minMatch) {
-                mergeRowsSideBySide(diffInfo, dsp0, rowMatch.row0, dsp1, rowMatch.row1);
+                mergeRowByRow(diffInfo, dsp0, rowMatch.row0, dsp1, rowMatch.row1);
                 row0 = rowMatch.row0+1;   // TODO - use rowMatch instead of row0, row1
                 row1 = rowMatch.row1+1;
                 dsp0 = row0;
@@ -247,7 +249,7 @@ void mergeTextDiles(lldiff::Diff& diffInfo)
     }
     
     // Display any remainning lines.
-    mergeRowsSideBySide(
+    mergeRowByRow(
               diffInfo,
               dsp0, (lldiff::RowNum)diffInfo.fileLines0.size()-1,
               dsp1, (lldiff::RowNum)diffInfo.fileLines1.size()-1);
@@ -340,13 +342,22 @@ int main(int argc, char* argv[]) {
                     diffInfo.left = value1+1;
                 }
                 break;
-              case 'n':  // No line out for file 'n' when merging
+              case 'n':  // No line out for file 'n' when merging identical keys
               case 'N':  // -n1 or -N1
                 if (arg[1] == '0') {
-                    diffInfo.mergeOut0 = false;
+                    diffInfo.identicalOut0 = false;
                 }
                 if (arg[1] == '1') {
-                    diffInfo.mergeOut1 = false;
+                    diffInfo.identicalOut1 = false;
+                }
+                break;
+              case 'x':  // No line out for file 'n' when merging unique keys
+              case 'X':  // -x1 or -X1
+                if (arg[1] == '0') {
+                    diffInfo.uniqueOut0 = false;
+                }
+                if (arg[1] == '1') {
+                    diffInfo.uniqueOut1 = false;
                 }
                 break;
               case 'R': // Right when row is missing
