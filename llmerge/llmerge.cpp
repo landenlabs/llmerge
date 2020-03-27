@@ -87,6 +87,7 @@ const char* HELP =
 // Forward declaration
 void init();
 
+int errorCnt = 0;
 
 // ------------------------------------------------------------------------------------------------
 // Display text rows side-by-side
@@ -179,7 +180,7 @@ void compareTextFiles(const lldiff::Diff& diffInfo)
               dsp0, (lldiff::RowNum)diffInfo.fileLines0.size()-1,
               dsp1, (lldiff::RowNum)diffInfo.fileLines1.size()-1);
 
-    std::cout << "[end]\n";
+    std::cout << Colors::colorize("_Y_[end]_X_\n");
 }
 
 // ------------------------------------------------------------------------------------------------
@@ -258,9 +259,18 @@ void mergeTextDiles(lldiff::Diff& diffInfo)
 // ================================================================================================
 // Runtime switch verification
 
+bool verify(const char* msg, const char* p1, unsigned minLen) {
+    if (p1 == nullptr || strlen(p1) < minLen) {
+        std::cerr <<  Colors::colorize("\n\a_R_  **** Missing parameter for option _X_") << msg << "\n\n";
+        errorCnt++;
+        return false;
+    }
+    return true;
+}
 bool verify(const char* msg, const void* p1) {
-    if (p1 != nullptr) {
-        std::cerr << "Missing parameter for option " << msg << std::endl;
+    if (p1 == nullptr) {
+        std::cerr <<  Colors::colorize("\n\a_R_  **** Missing parameter for option _X_") << msg << "\n\n";
+        errorCnt++;
         return false;
     }
     return true;
@@ -298,7 +308,7 @@ int main(int argc, char* argv[]) {
                 try {
                     regP = new regex(value1+1);
                 } catch (exception ex) {
-                    std::cerr << "Invalid regular expression " << value1+1
+                    std::cerr << Colors::colorize("_R_Invalid regular expression _X_") << value1+1
                         << "\n" <<  ex.what()
                         << std::endl;
                 }
@@ -332,13 +342,13 @@ int main(int argc, char* argv[]) {
               case 'v': // Verbose, defaults false
                 diffInfo.verbose = true;
                 break;
-              case 'D': // Divider, defaults to ","
-                if (verify("D", value1)) {
+              case 'D': // Divider, defaults to "||", use -D= to set to empty string
+                if (verify("D", value1, 1)) {
                     diffInfo.divider = value1+1;
                 }
                 break;
               case 'L': // Left when row is missing
-                if (verify("L", value1)) {
+                if (verify("L", value1, 2)) {
                     diffInfo.left = value1+1;
                 }
                 break;
@@ -361,7 +371,7 @@ int main(int argc, char* argv[]) {
                 }
                 break;
               case 'R': // Right when row is missing
-                if (verify("R", value1)) {
+                if (verify("R", value1, 2)) {
                     diffInfo.right = value1+1;
                 }
                 break;
@@ -373,27 +383,29 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    if (argIdx+2 <= argc) {
-        // ---- Load files and hash lines
-        bool got0 = diffInfo.readFile(argv[argIdx++], 0);
-        bool got1 = diffInfo.readFile(argv[argIdx++], 1);
-        diffInfo.width = max(diffInfo.widths[0], diffInfo.widths[1]);
-        
-        if (got0 && got1) {
-            // ---- Merge or compare files.
-            if (doMerge) {
-                mergeTextDiles(diffInfo);
+    if (errorCnt == 0) {
+        if (argIdx+2 <= argc) {
+            // ---- Load files and hash lines
+            bool got0 = diffInfo.readFile(argv[argIdx++], 0);
+            bool got1 = diffInfo.readFile(argv[argIdx++], 1);
+            diffInfo.width = max(diffInfo.widths[0], diffInfo.widths[1]);
+            
+            if (got0 && got1) {
+                // ---- Merge or compare files.
+                if (doMerge) {
+                    mergeTextDiles(diffInfo);
+                } else {
+                    compareTextFiles(diffInfo);
+                }
             } else {
-                compareTextFiles(diffInfo);
+                if (!got0)
+                    std::cerr <<  Colors::colorize("_R_Failed to load text rows from:_X_") << diffInfo.filenames[0] << std::endl;
+                if (!got1)
+                    std::cerr <<  Colors::colorize("_R_Failed to load text rows from:_X_") << diffInfo.filenames[1] << std::endl;
             }
         } else {
-            if (!got0)
-                std::cerr << "Failed to load text rows from:" << diffInfo.filenames[0] << std::endl;
-            if (!got1)
-                std::cerr << "Failed to load text rows from:" << diffInfo.filenames[1] << std::endl;
+            std::cerr << Colors::colorize(HELP);
         }
-    } else {
-        std::cerr << Colors::colorize(HELP);
     }
     
     return 0;
