@@ -1,0 +1,137 @@
+
+
+
+
+    <!-- Strings used by Weather Tour Rules range time period -->
+    <!-- Strings used by Weather Tour Rules single time period -->
+    <string name="rule_7colder" formatted="false" >Se siente como la temperatura de %1$s. ¡No olvides un sombrero! Más de la mitad de su calor corporal se pierde cuando no usa un sombrero.</string>
+    <string name="rule_7colder_range" formatted="false" >La sensación térmica hará que el aire se sienta más fresco. ¡No olvides un sombrero! Más de la mitad de su calor corporal se pierde cuando no usa un sombrero.</string>
+    <string name="rule_accumlating_snow" formatted="false" >Se espera %1$s de nieve acumulada.</string>
+    <string name="rule_accumlating_snow_range" formatted="false" >Se espera %1$s de nieve acumulada.</string>
+    <string name="rule_big_cool_down" formatted="false" >Gran enfriamiento! La alta temperatura caerá %1$s de %2$s a %3$s.</string>
+    <string name="rule_big_cool_down_range" formatted="false" >Gran enfriamiento! La temperatura alta caerá %1$s de %1$s a %1$s.</string>
+    <string name="rule_big_warm_up" formatted="false" >Gran calentamiento! Los saltos de alta temperatura %1$s de %2$s a %3$s.</string>
+    <string name="rule_big_warm_up_range" formatted="false" >¡Grandes cosas de calentamiento! La alta temperatura salta %1$s de %1$s a %1$s.</string>
+    <string name="rule_changed_to_rain" formatted="false" >nieve cambiando a lluvia!</string>
+    <string name="rule_changed_to_snow" formatted="false" >lluvia cambiando a nieve!</string>
+    <string name="rule_coldest_time" formatted="false" >La parte más fría del día será a las %1$s.</string>
+    <string name="rule_coldest_time_range" formatted="false" >La parte más fría del día ocurrirá a las %1$s.</string>
+    <string name="rule_dewpoint_60_65" formatted="false" >El aire se siente un poco pegajoso.</string>
+    <string name="rule_dewpoint_60_65_range" formatted="false" >El aire se siente un poco pegajoso.</string>
+    <string name="rule_dewpoint_65_70" formatted="false" >El aire se siente pegajoso.</string>
+    <string name="rule_dewpoint_65_70_range" formatted="false" >El aire se siente pegajoso.</string>
+    <string name="rule_dewpoint_70_75" formatted="false" >El aire se siente húmedo e incómodo.</string>
+    <string name="rule_dewpoint_70_75_range" formatted="false" >El aire se siente húmedo e incómodo.</string>
+    <string name="rule_dewpoint_75_80" formatted="false" >El aire se siente húmedo y extremadamente incómodo.</string>
+    <string name="rule_dewpoint_75_80_range" formatted="false" >El aire se siente húmedo y extremadamente incómodo.</string>
+    <string name="rule_dewpoint_80" formatted="false" >El aire se siente opresivo y podría ser peligroso para las personas con enfermedades relacionadas con el asma.</string>
+    <string name="rule_dewpoint_80_range" formatted="false" >El aire se siente opresivo y peligroso para las personas con enfermedades relacionadas con el asma.</string>
+    <string name="rule_feelslike" formatted="false" >Se siente como temperatura de %1$s.</string>
+    <string name="rule_feelslike_range" formatted="false" >El aumento de la humedad hará que el aire se sienta más cálido.</string>
+    <string name="rule_freezingRain" formatted="false" >Los caminos helados pueden hacer que viajar sea peligroso. ¡Con precaución!</string>
+    <string name="rule_freezingRain_range" formatted="false" >Los caminos helados pueden hacer que viajar sea peligroso. ¡Con precaución!</string>
+    <string name="rule_frostbite05" formatted="false" >¡Una helada extrema de %1$s significa que la congelación podría ocurrir en menos de 5 minutos! Minimice el tiempo al aire libre, use varias capas y manténgase seco.</string>
+    <string name="rule_frostbite05_range" formatted="false" >"¡Helada extrema! La congelación podría ocurrir en menos de 5 minutos. Minimice el tiempo al aire libre</string>
+    <string name="rule_frostbite10" formatted="false" >Un viento helado de %1$s significa que podría producirse congelación en menos de 10 minutos. Minimice el tiempo al aire libre, use varias capas y manténgase seco.</string>
+    <string name="rule_frostbite10_range" formatted="false" >"¡Peligroso viento helado! La congelación podría ocurrir en menos de 10 minutos. Minimice el tiempo al aire libre</string>
+    <string name="rule_frostbite30" formatted="false" >Un viento frío peligroso de %1$s significa que podría producirse congelación en menos de 30 minutos. Minimice el tiempo al aire libre, use varias capas y manténgase seco.</string>
+    <string name="rule_frostbite30_range" formatted="false" >"¡Helada helada! La congelación podría ocurrir en menos de 30 minutos. Minimice el tiempo al aire libre</string>
+    <string name="rule_frostbite_extreme" formatted="false" >¡Una helada extrema de %1$s significa que la congelación podría ocurrir en menos de 5 minutos! Minimice el tiempo al aire libre, use varias capas y manténgase seco.</string>
+    <string name="rule_frostbite_extreme_range" formatted="false" >"¡Helada extrema! La congelación podría ocurrir en menos de 5 minutos. Minimice el tiempo al aire libre</string>
+    <string name="rule_good_night" formatted="false" >Clima fresco y confortable para dormir.</string>
+    <string name="rule_good_night_range" formatted="false" >Clima fresco y confortable para dormir.</string>
+    <string name="rule_heatindex" formatted="false" >El índice de calor de %1$s significa que la insolación, los calambres por calor o el agotamiento por calor son PROBABLES. El golpe de calor es POSIBLE si está físicamente activo al aire libre durante mucho tiempo.</string>
+    <string name="rule_heatindex_range" formatted="false" >"El calor peligroso puede provocar insolación</string>
+    <string name="rule_heavy_rainHourly" formatted="false" >Una lluvia de %1$s dificultará la conducción.</string>
+    <string name="rule_heavy_rainHourly_range" formatted="false" >Una lluvia de %1$s dificultará la conducción.</string>
+    <string name="rule_hottemp" formatted="false" >El índice de calor de %1$s significa insolación o insolación ALTAMENTE PROBABLE si está al aire libre durante un largo período de tiempo. Beba mucha agua y reduzca la actividad física al aire libre.</string>
+    <string name="rule_hottemp_range" formatted="false" >El calor extremo provocará insolación o insolación ALTAMENTE PROBABLE si está al aire libre durante un largo período de tiempo. Beba mucha agua y reduzca la actividad física al aire libre.</string>
+    <string name="rule_max_cool_down" formatted="false" >¡Rápido enfriamiento! La temperatura caerá %4$s de %5$s a %6$s.</string>
+    <string name="rule_max_cool_down_range" formatted="false" >¡Rápido enfriamiento! La temperatura caerá %1$s de %1$s a %1$s.</string>
+    <string name="rule_max_warm_up" formatted="false" >Calentamiento rápido! La temperatura subirá %4$s de %5$s a %6$s.</string>
+    <string name="rule_max_warm_up_range" formatted="false" >Calentamiento rápido! La temperatura aumentará %4$s de %5$s a %6$s</string>
+    <string name="rule_ptype_precip" translatable="false">Mezcla invernal</string>
+    <string name="rule_ptype_rain" translatable="false">Lluvia</string>
+    <string name="rule_ptype_snow" translatable="false">Nieve</string>
+    <string name="rule_quick_cool_down" formatted="false" >¡Rápido enfriamiento! La temperatura caerá %1$s de %2$s a %3$s.</string>
+    <string name="rule_quick_cool_down_range" formatted="false" >¡Rápido enfriamiento! La temperatura caerá %1$s de %1$s a %1$s.</string>
+    <string name="rule_quick_warm_up" formatted="false" >Calentamiento rápido! La temperatura subirá %1$s de %2$s a %3$s.</string>
+    <string name="rule_quick_warm_up_range" formatted="false" >Calentamiento rápido! La temperatura aumentará %1$s de %1$s a %1$s</string>
+    <string name="rule_rainHourly" formatted="false" >Se pronostica %1$s de lluvia.</string>
+    <string name="rule_rainHourly_range" formatted="false" >Se pronostica %1$s de lluvia.</string>
+    <string name="rule_rain_light" formatted="false" >%1$s de lluvia esperada.</string>
+    <string name="rule_rain_light_range" formatted="false" >Se esperan %1$s de lluvia.</string>
+    <string name="rule_rain_moderate" formatted="false" >Se esperan %1$s de lluvia moderada.</string>
+    <string name="rule_rain_moderate_range" formatted="false" >Se esperan %1$s de lluvia moderada.</string>
+    <string name="rule_rapid_snow" formatted="false" >Nieve rápidamente acumulada de %1$s. La mala visibilidad puede dificultar el viaje.</string>
+    <string name="rule_rapid_snow_range" formatted="false" >Acumulación rápida de nieve con una acumulación total de %1$s. La mala visibilidad dificultará el viaje.</string>
+    <string name="rule_rec_of_high" formatted="false" >El pronóstico de alta temperatura de %1$s puede empatar el récord de %3$d.</string>
+    <string name="rule_rec_of_high_range" formatted="false" >La temperatura alta pronosticada de %1$s puede empatar el récord de %1$s.</string>
+    <string name="rule_reclikely_high" formatted="false" >¡Un nuevo récord de temperatura alta de %1$s hoy! El récord anterior fue %2$s en %3$d.</string>
+    <string name="rule_reclikely_high_range" formatted="false" >"Es probable una nueva temperatura alta récord. El registro anterior es %1$s</string>
+    <string name="rule_reclikely_low" formatted="false" >Es probable un nuevo récord de baja temperatura. El récord anterior fue de %2$s en %3$d.</string>
+    <string name="rule_reclikely_low_range" formatted="false" >"Es probable un nuevo récord de baja temperatura. El registro anterior es %1$s</string>
+    <string name="rule_recnear_high" formatted="false" >La temperatura alta está muy cerca de la temperatura alta récord del %2$s de %3$d.</string>
+    <string name="rule_recnear_low" formatted="false" >La temperatura baja está muy cerca de la temperatura baja récord de %2$s de %3$d.</string>
+    <string name="rule_record_cold" formatted="false" >¡La temperatura es inusualmente fría! Para %4$s, la temperatura baja promedio en los últimos 30 años es %2$s.</string>
+    <string name="rule_record_cold_range" formatted="false" >¡La temperatura es inusualmente fría! La temperatura baja promedio en los últimos 30 años es de %1$s.</string>
+    <string name="rule_record_high" formatted="false" >La temperatura actual vincula la temperatura alta récord de %1$s de %3$d.</string>
+    <string name="rule_record_low" formatted="false" >Un nuevo récord de baja temperatura! El récord anterior fue de %2$s en %3$d.</string>
+    <string name="rule_record_warm" formatted="false" >¡La temperatura es inusualmente cálida! Para el %4$s, alto la temperatura promedio en los últimos 30 años es de %2$s.</string>
+    <string name="rule_record_warm_range" formatted="false" >¡La temperatura es inusualmente cálida! La temperatura alta promedio en los últimos 30 años es de aproximadamente %2$s.</string>
+    <string name="rule_significant_rain" formatted="false" >%1$s de lluvia significativa esperada.</string>
+    <string name="rule_significant_rain_range" formatted="false" >%1$s 1 de precipitaciones significativas esperadas.</string>
+    <string name="rule_sleet_expected" formatted="false" >Aguanieve se pronostica.</string>
+    <string name="rule_sleet_expected_range" formatted="false" >Aguanieve se pronostica.</string>
+    <string name="rule_sleet_falling" formatted="false" >Aguanieve está cayendo.</string>
+    <string name="rule_snow_dusting" formatted="false" >Se pronostica %1$s de nieve.</string>
+    <string name="rule_snow_dusting_range" formatted="false" >Se pronostica %1$s de nieve.</string>
+    <string name="rule_snow_expected" formatted="false" >%1$s de nieve esperada. ¡Prepárate para palear!</string>
+    <string name="rule_snow_expected_range" formatted="false" >%1$s de nieve esperada. ¡Prepárate para palear!</string>
+    <string name="rule_snow_expected_shovel" formatted="false" >%1$s de nieve esperada. ¡Es hora de conseguir gasolina para el quitanieves!</string>
+    <string name="rule_snow_expected_shovel_range" formatted="false" >%1$s de nieve esperada. ¡Es hora de conseguir gasolina para el quitanieves!</string>
+    <string name="rule_soaking_expected" formatted="false" >Se espera %1$s lluvia fuerte.</string>
+    <string name="rule_soaking_expected_range" formatted="false" >Se espera %1$s lluvia fuerte.</string>
+    <string name="rule_soaking_rain" formatted="false" >Se espera %1$s de fuertes lluvias.</string>
+    <string name="rule_soaking_rain_range" formatted="false" >Se espera %1$s de fuertes lluvias.</string>
+    <string name="rule_time_range_to" translatable="false">\u0020a\u0020</string>
+    <string name="rule_visibility_improving" formatted="false" >¡La visibilidad está mejorando!</string>
+    <string name="rule_visibility_is" formatted="false" >La visibilidad es %1$s</string>
+    <string name="rule_visibility_one_eight" formatted="false" >Visibilidad: %1$s. ¡Reduzca su velocidad y esté alerta cuando conduzca!</string>
+    <string name="rule_visibility_one_eight_range" formatted="false" >Poca visibilidad. ¡Reduzca su velocidad y esté alerta cuando conduzca!</string>
+    <string name="rule_visibility_one_mile" formatted="false" >Visibilidad lo más baja posible %1$s.</string>
+    <string name="rule_visibility_one_mile_range" formatted="false" >Visibilidad lo más baja posible %1$s.</string>
+    <string name="rule_visibility_will_be" formatted="false" >La visibilidad será %1$s.</string>
+    <string name="rule_visibility_will_be_range" formatted="false" >Visibilidad por debajo de %3$s. </string>
+    <string name="rule_warm_day" formatted="false" >Disfruta el cálido día! La temperatura alta es %1$s por encima del promedio del clima.</string>
+    <string name="rule_warm_day_range" formatted="false" >¡Disfruta el cálido día! La temperatura estará por encima de la temperatura alta promedio.</string>
+    <string name="rule_warmest_time" formatted="false" >La temperatura alta ocurrirá cerca de las %1$s.</string>
+    <string name="rule_warmest_time_range" formatted="false" >La temperatura alta ocurrirá cerca de las %1$s.</string>
+    <string name="rule_weekend" formatted="false" >¡Un agradable %1$s en %2$s! ¡Disfruta tu fin de semana!</string>
+    <string name="rule_windspeed_15_30" formatted="false" >Ventoso</string>
+    <string name="rule_windspeed_15_30_range" formatted="false" >Ventoso</string>
+    <string name="rule_windspeed_30_40" formatted="false" >Velocidad del viento: %1$s. El viento podría soplar objetos pequeños en el exterior. Conducir en camiones y autobuses podría ser difícil.</string>
+    <string name="rule_windspeed_30_40_range" formatted="false" >Pequeños objetos en el exterior podrían ser arrastrados por el viento. Conducir en camiones y autobuses podría ser difícil.</string>
+    <string name="rule_windspeed_40" formatted="false" >Alta velocidad del viento de %1$s. Asegure cualquier objeto suelto al aire libre que pueda ser transportado por el viento. Conducir en camiones y autobuses puede ser difícil.</string>
+    <string name="rule_windspeed_40_range" formatted="false" >Alta velocidad del viento. Traiga adentro o asegure cualquier objeto externo suelto que pueda ser transportado por el viento. Conducir en camiones y autobuses es difícil.</string>
+    <string name="rule_windspeed_now_111_130" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 3. Se esperan daños importantes en los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_now_130_157" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 4. Se esperan daños catastróficos en los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_now_157" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 5. El daño catastrófico a los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_now_157_range" formatted="false" >La velocidad del viento alcanzará los niveles de huracán de categoría 5. El daño catastrófico a los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_now_74_96" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 1. Es posible dañar el techo y el revestimiento y los daños a los árboles podrían provocar cortes de energía.</string>
+    <string name="rule_windspeed_now_96_111" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 2. Las casas podrían tener daños en el techo y el revestimiento, mientras que los daños a los árboles podrían provocar cortes de energía.</string>
+    <string name="rule_windspeed_will_111_130" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 3. Se esperan daños importantes en los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_will_111_130_range" formatted="false" >La velocidad del viento alcanzará los niveles de huracán de categoría 3. Se esperan daños importantes en los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_will_130_157" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 4. Se esperan daños catastróficos en los hogares y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_will_130_157_range" formatted="false" >La velocidad del viento alcanzará los niveles de huracán de categoría 4. Se esperan daños estructurales catastróficos en las viviendas y los cortes de energía podrían durar semanas.</string>
+    <string name="rule_windspeed_will_74_96" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 1. Es posible dañar el techo y el revestimiento y los daños a los árboles podrían provocar cortes de energía.</string>
+    <string name="rule_windspeed_will_74_96_range" formatted="false" >La velocidad del viento alcanzará los niveles de huracán de categoría 1. Es posible dañar el techo y el revestimiento y los daños a los árboles podrían provocar cortes de energía.</string>
+    <string name="rule_windspeed_will_96_111" formatted="false" >La velocidad del viento de %1$s ha alcanzado los niveles de huracán de categoría 2. Las casas podrían tener daños en el techo y el revestimiento, mientras que los daños a los árboles podrían provocar cortes de energía.</string>
+    <string name="rule_windspeed_will_96_111_range" formatted="false" >"La velocidad del viento alcanzará los niveles de huracán de categoría 2. Las casas podrían tener daños en el techo y el revestimiento</string>
+  -->
+  ~ The Weather Company Confidential
+  ~ Unpublished Copyright (c) 2018 The Weather Company, All Rights Reserved.
+<!--
+</resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>

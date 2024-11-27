@@ -1,0 +1,59 @@
+<?xml version='1.0'?>
+<!-- Date pulled  13-Aug-2019 -->
+<!-- Date hand fixed 26-Sep-2019 -->
+
+<AlertStyles>
+    <DefaultProperties>
+        <Property name='fillColor' value='192,192,192' />
+        <Property name='fillOpacity' value='0.5' />
+        <Property name='outlineColor' value='255,255,255' />
+        <Property name='outlineOpacity' value='1.0' />
+    </DefaultProperties>
+    <Alert category="wsi_WeatherAlertsFlood">
+        <Style significance="W" phenomena="FF" priority="50" fill="true" fillColor="139,0,0" fillOpacity="0.3" outline="true" outlineColor="139,0,0" countryCode="US"/>
+        <Style significance="W" phenomena="rainfall" priority="50" fill="true" fillColor="139,0,0" fillOpacity="0.7" outline="false" outlineColor="139,0,0" countryCode="CA"/>
+        <Style significance="W" phenomena="LS" priority="360" fill="true" fillColor="34,139,34" fillOpacity="0.3" outline="true" outlineColor="34,139,34" countryCode="US"/>
+        <Style significance="W" phenomena="FA" priority="370" fill="true" fillColor="0,255,0" fillOpacity="0.3" outline="true" outlineColor="0,255,0" countryCode="US"/>
+        <Style significance="W" phenomena="FL" priority="370" fill="true" fillColor="0,255,0" fillOpacity="0.3" outline="true" outlineColor="0,255,0" countryCode="US"/>
+        <Style significance="Y" phenomena="FL" priority="690" fill="true" fillColor="0,255,127" fillOpacity="0.5" outline="false" outlineColor="0,255,127" countryCode="US"/>
+        <Style significance="Y" phenomena="FA" priority="720" fill="true" fillColor="0,255,127" fillOpacity="0.5" outline="false" outlineColor="0,255,127" countryCode="US"/>
+        <Style significance="S" phenomena="HY" priority="730" fill="true" fillColor="0,255,127" fillOpacity="0.5" outline="false" outlineColor="0,255,127" countryCode="US"/>
+        <Style significance="A" phenomena="LS" priority="1060" fill="true" fillColor="102,205,170" fillOpacity="0.3" outline="false" outlineColor="102,205,170" countryCode="US"/>
+        <Style significance="A" phenomena="FA" priority="1070" fill="true" fillColor="46,139,87" fillOpacity="0.3" outline="false" outlineColor="46,139,87" countryCode="US"/>
+        <Style significance="A" phenomena="FL" priority="1070" fill="true" fillColor="46,139,87" fillOpacity="0.3" outline="false" outlineColor="46,139,87" countryCode="US"/>
+        <Style significance="B" phenomena="FA" priority="1145" fill="true" fillColor="128,128,128" fillOpacity="0.5" outline="false" outlineColor="128,128,128" countryCode="US"/>
+        <Style significance="S" phenomena="LS" priority="1190" fill="true" fillColor="107,142,35" fillOpacity="0.5" outline="false" outlineColor="107,142,35" countryCode="US"/>
+        <Style significance="O" phenomena="TSF" priority="1250" fill="true" fillColor="144,238,144" fillOpacity="0.5" outline="false" outlineColor="144,238,144" countryCode="US"/>
+    </Alert>
+    <Alert category="wsi_WeatherAlertsMarine">
+        <Style significance="W" phenomena="tsunami" priority="10" fill="true" fillColor="253,99,71" fillOpacity="0.7" outline="false" outlineColor="253,99,71" countryCode="CA"/>
+        <Style significance="W" phenomena="strongWind" priority="30" fill="true" fillColor="255,140,0" fillOpacity="0.7" outline="false" outlineColor="255,140,0" countryCode="CA"/>
+        <Style significance="W" phenomena="stormSurge" priority="170" fill="true" fillColor="181,36,247" fillOpacity="0.7" outline="false" outlineColor="181,36,247" countryCode="CA"/>
+        <Style significance="W" phenomena="MA" priority="210" fill="true" fillColor="255,165,0" fillOpacity="0.7" outline="false" outlineColor="255,165,0" countryCode="US"/>
+        <Style significance="W" phenomena="squall" priority="235" fill="true" fillColor="205,92,92" fillOpacity="0.7" outline="false" outlineColor="205,92,92" countryCode="CA"/>
+        <Style significance="W" phenomena="HW" priority="260" fill="true" fillColor="218,165,32" fillOpacity="0.7" outline="false" outlineColor="218,165,32" countryCode="US"/>
+        <Style significance="W" phenomena="SR" priority="280" fill="true" fillColor="148,0,211" fillOpacity="0.7" outline="false" outlineColor="148,0,211" countryCode="US"/>
+        <Style significance="A" phenomena="tsunami" priority="300" fill="true" fillColor="255,0,255" fillOpacity="0.3" outline="false" outlineColor="255,0,255" countryCode="CA"/>
+        <Style significance="A" phenomena="SR" priority="580" fill="true" fillColor="255,228,181" fillOpacity="0.3" outline="false" outlineColor="255,228,181" countryCode="US"/>
+        <Style significance="Y" phenomena="CF" priority="750" fill="true" fillColor="124,252,0" fillOpacity="0.5" outline="false" outlineColor="124,252,0" countryCode="US"/>
+     
+        <Style significance="W" phenomena="rpdCloseLead" priority="348" fill="true" fillColor="128,128,128" fillOpacity="0.7" outline="false" outlineColor="128,128,128" countryCode="CA"/>
+        <Style significance="W" phenomena="icePressure" priority="349" fill="true" fillColor="139,0,139" fillOpacity="0.7" outline="false" outlineColor="139,0,139" countryCode="CA"/>
+        <Style significance="W" phenomena="CF" priority="350" fill="true" fillColor="34,139,34" fillOpacity="0.7" outline="false" outlineColor="34,139,34" countryCode="US"/>
+        <Style significance="W" phenomena="highWater" priority="351" fill="true" fillColor="255,0,255" fillOpacity="0.7" outline="false" outlineColor="255,0,255" countryCode="CA"/>
+        <Style significance="W" phenomena="SU" priority="380" fill="true" fillColor="34,139,34" fillOpacity="0.7" outline="false" outlineColor="34,139,34" countryCode="US"/>
+        <Style significance="W" phenomena="waterspout" priority="381" fill="true" fillColor="255,0,0" fillOpacity="0.7" outline="false" outlineColor="255,0,0" countryCode="CA"/>
+        <Style significance="W" phenomena="GL" priority="460" fill="true" fillColor="221,160,221" fillOpacity="0.7" outline="false" outlineColor="221,160,221" countryCode="US"/>
+        <Style significance="W" phenomena="galeWind" priority="460" fill="true" fillColor="221,160,221" fillOpacity="0.7" outline="false" outlineColor="221,160,221" countryCode="CA"/>
+        <Style significance="Y" phenomena="SU" priority="760" fill="true" fillColor="186,85,211" fillOpacity="0.5" outline="false" outlineColor="186,85,211" countryCode="US"/>
+        <Style significance="A" phenomena="squall" priority="761" fill="true" fillColor="153,50,204" fillOpacity="0.3" outline="false" outlineColor="153,50,204" countryCode="CA"/>
+        <Style significance="A" phenomena="waterspout" priority="762" fill="true" fillColor="255,255,0" fillOpacity="0.3" outline="false" outlineColor="255,255,0" countryCode="CA"/>
+        <Style significance="A" phenomena="spclMarine" priority="763" fill="true" fillColor="255,165,0" fillOpacity="0.3" outline="false" outlineColor="255,165,0" countryCode="CA"/>
+        <Style significance="Y" phenomena="SW" priority="800" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
+        <Style significance="Y" phenomena="RB" priority="810" fill="true" fillColor="216,191,216" fillOpacity="0.5" outline="false" outlineColor="216,191,216" countryCode="US"/>
+        <Style significance="Y" phenomena="spclMarine" priority="1110" fill="true" fillColor="255,239,213" fillOpacity="0.5" outline="false" outlineColor="255,239,213" countryCode="CA"/>
+        <Style significance="S" phenomena="CF" priority="1180" fill="true" fillColor="107,142,35" fillOpacity="0.5" outline="false" outlineColor="107,142,35" countryCode="US"/>
+        <Style significance="S" phenomena="MA" priority="1210" fill="true" fillColor="255,239,213" fillOpacity="0.5" outline="false" outlineColor="255,239,213" countryCode="US"/>
+    </Alert>
+      </Alert>
+</AlertStyles>

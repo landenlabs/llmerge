@@ -1,0 +1,16 @@
+
+cd src/main/res
+
+
+sort values/strings_rules.xml    > data/rules-english.xml
+sort values-es/strings_rules.xml > data/rules-spanish.xml
+llmerge '-c= *<string name="(rule_[^"]+)".*' data/rules-english.xml data/rules-spanish.xml
+
+llmerge '-c=<string name="(rule_[^"]+)".*' '-m=(.*)' data/rules-english.xml data/rules-spanish.xml
+
+llmerge '-c= *<string name="(rule_[^"]+)".*' -m data/rules-english.xml data/rules-spanish.xml
+
+llmerge '-c= *<string name="(rule_[^"]+)".*' '-m=(.*)' data/rules-english.xml data/rules-spanish.xml
+llmerge '-c= *<string name="(rule_[^"]+)".*' '-m1=(.*)' '-m2=' ( .* ) '  data/rules-english.xml data/rules-spanish.xml
+llmerge '-c= *<string name="(rule_[^"]+)".*' '-m1=(.*)' '-m2=(.*)' data/rules-english.xml data/rules-spanish.xml
+llmerge '-c= *<string name="(rule_[^"]+)".*' -m -v data/rules-english.xml data/rules-spanish.xml

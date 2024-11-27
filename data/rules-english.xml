@@ -1,0 +1,152 @@
+
+
+
+    <!-- Strings used by Weather Tour Rules range time period -->
+    <!-- Strings used by Weather Tour Rules single time period -->
+    <string name="rule_7colder" formatted="false" translatable="false" >Feels Like Temperature of %1$s. Don\'t forget a hat! More than half of your body heat is lost when not wearing a hat.</string>
+    <string name="rule_7colder_range" formatted="false" translatable="false" >Wind chill will make the air feel cooler. Don\'t forget a hat! More than half of your body heat is lost when not wearing a hat.</string>
+    <string name="rule_accumlating_snow" formatted="false" translatable="false" >%1$s of accumulating snow expected.</string>
+    <string name="rule_accumlating_snow_range" formatted="false" translatable="false" >%1$s of accumulating snow expected.</string>
+    <string name="rule_big_cool_down" formatted="false" translatable="false" >Big cool down! The high temperature will drop %1$s from %2$s to %3$s.</string>
+    <string name="rule_big_cool_down_range" formatted="false" translatable="false" >Big cool down! The high temperature will drop %1$s from %2$s to %3$s.</string>
+    <string name="rule_big_warm_up" formatted="false" translatable="false" >Big warm up! The high temperature jumps %1$s from %2$s to %3$s.</string>
+    <string name="rule_big_warm_up_range" formatted="false" translatable="false" >Big warm up! The high temperature jumps %1$s from %2$s to %3$s.</string>
+    <string name="rule_c" translatable="false">°C</string>
+    <string name="rule_changed_to_rain" formatted="false" translatable="false" >%2$s changing to rain!</string>
+    <string name="rule_changed_to_snow" formatted="false" translatable="false" >%2$s changing to snow!</string>
+    <string name="rule_cm" translatable="false">\u0020cm</string>
+    <string name="rule_coldest_time" formatted="false" translatable="false" >The coldest part of the day will be at %1$s.</string>
+    <string name="rule_coldest_time_range" formatted="false" translatable="false" >The coldest part of the day will occur at %1$s.</string>
+    <string name="rule_dewpoint_60_65" formatted="false" translatable="false" >The air feels a little sticky.</string>
+    <string name="rule_dewpoint_60_65_range" formatted="false" translatable="false" >The air feels a little sticky.</string>
+    <string name="rule_dewpoint_65_70" formatted="false" translatable="false" >The air feels sticky.</string>
+    <string name="rule_dewpoint_65_70_range" formatted="false" translatable="false" >The air feels sticky.</string>
+    <string name="rule_dewpoint_70_75" formatted="false" translatable="false" >The air feels humid and uncomfortable.</string>
+    <string name="rule_dewpoint_70_75_range" formatted="false" translatable="false" >The air feels humid and uncomfortable.</string>
+    <string name="rule_dewpoint_75_80" formatted="false" translatable="false" >The air feels humid and extremely uncomfortable.</string>
+    <string name="rule_dewpoint_75_80_range" formatted="false" translatable="false" >The air feels humid and extremely uncomfortable.</string>
+    <string name="rule_dewpoint_80" formatted="false" translatable="false" >The air feels oppressive and could be dangerous for people with asthma related illnesses.</string>
+    <string name="rule_dewpoint_80_range" formatted="false" translatable="false" >The air feels oppressive and could be dangerous for people with asthma related illnesses.</string>
+    <string name="rule_f" translatable="false">°F</string>
+    <string name="rule_feelslike" formatted="false" translatable="false" >Feels like temperature of %1$s.</string>
+    <string name="rule_feelslike_range" formatted="false" translatable="false" >Increased humidity will make the air feel warmer.</string>
+    <string name="rule_freezingRain" formatted="false" translatable="false" >Icy roads may make travel hazardous. Use caution!</string>
+    <string name="rule_freezingRain_range" formatted="false" translatable="false" >Icy roads may make travel hazardous. Use caution!</string>
+    <string name="rule_frostbite05" formatted="false" translatable="false" >Extreme wind chill of %1$s means frostbite could occur in less than 5 minutes! Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite05_range" formatted="false" translatable="false" >Extreme wind chill! Frostbite could occur in less than 5 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite10" formatted="false" translatable="false" >Dangerous wind chill of %1$s means frostbite could occur in less than 10 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite10_range" formatted="false" translatable="false" >Dangerous wind chill! Frostbite could occur in less than 10 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite30" formatted="false" translatable="false" >Dangerous wind chill of %1$s means frostbite could occur in less than 30 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite30_range" formatted="false" translatable="false" >Frigid wind chill! Frostbite could occur in less than 30 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite_extreme" formatted="false" translatable="false" >Extreme wind chill of %1$s means frostbite could occur in less than 5 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_frostbite_extreme_range" formatted="false" translatable="false" >Extreme wind chill! Frostbite could occur in less than 5 minutes. Minimize time outdoors, wear multiple layers, and stay dry.</string>
+    <string name="rule_good_night" formatted="false" translatable="false" >Cool and comfortable sleeping weather.</string>
+    <string name="rule_good_night_range" formatted="false" translatable="false" >Cool and comfortable sleeping weather.</string>
+    <string name="rule_heatindex" formatted="false" translatable="false" >Heat Index of %1$s means sunstroke, heat cramps or heat exhaustion are LIKELY. Heatstroke is POSSIBLE if you are physically active outdoors for a long time.</string>
+    <string name="rule_heatindex130" formatted="false" translatable="false" >Heat Index of %1$s means heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.</string>
+    <string name="rule_heatindex_range" formatted="false" translatable="false" >Dangerous heat will make sunstroke, heat cramps or heat exhaustion are LIKELY. Heatstroke is POSSIBLE if you are physically active outdoors for a long time.</string>
+    <string name="rule_heavy_rainHourly" formatted="false" translatable="false" >Rainfall of %1$s will make driving difficult.</string>
+    <string name="rule_heavy_rainHourly_range" formatted="false" translatable="false" >Rainfall of %1$s will make driving difficult.</string>
+    <string name="rule_hottemp" formatted="false" translatable="false" >Extreme heat will make heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.</string>
+    <string name="rule_hottemp_range" formatted="false" translatable="false" >Extreme heat will make heatstroke or sunstroke HIGHLY LIKELY if outdoors for a long period of time. Drink plenty of water and reduce outdoor physical activity.</string>
+    <string name="rule_in" translatable="false">\″</string>
+    <string name="rule_km" translatable="false">\u0020km</string>
+    <string name="rule_kph" translatable="false">\u0020kph</string>
+    <string name="rule_max_cool_down" formatted="false" translatable="false" >Quick cool down! The temperature will fall %4$s from %5$s to %6$s.</string>
+    <string name="rule_max_cool_down_range" formatted="false" translatable="false" >Quick cool down! The temperature will fall %4$s from %5$s to %6$s.</string>
+    <string name="rule_max_warm_up" formatted="false" translatable="false" >Quick warm up! The temperature will rise %4$s from %5$s to %6$s.</string>
+    <string name="rule_max_warm_up_range" formatted="false" translatable="false" >Quick warm up! The temperature will rise %4$s from %5$s to %6$s.</string>
+    <string name="rule_mile" translatable="false">\u0020mile</string>
+    <string name="rule_miles" translatable="false">\u0020miles</string>
+    <string name="rule_mm" translatable="false">\u0020mm</string>
+    <string name="rule_mph" translatable="false">\u0020mph</string>
+    <string name="rule_ptype_precip" translatable="false">Wintry mix</string>
+    <string name="rule_ptype_rain" translatable="false">Rain</string>
+    <string name="rule_ptype_snow" translatable="false">Snow</string>
+    <string name="rule_quick_cool_down" formatted="false" translatable="false" >Quick cool down! The temperature will fall %1$s from %2$s to %3$s.</string>
+    <string name="rule_quick_cool_down_range" formatted="false" translatable="false" >Quick cool down! The temperature will fall %1$s from %2$s to %3$s.</string>
+    <string name="rule_quick_warm_up" formatted="false" translatable="false" >Quick warm up! The temperature will rise %1$s from %2$s to %3$s.</string>
+    <string name="rule_quick_warm_up_range" formatted="false" translatable="false" >Quick warm up! The temperature will rise %1$s from %2$s to %3$s.</string>
+    <string name="rule_rainHourly" formatted="false" translatable="false" >%1$s of rain is forecast.</string>
+    <string name="rule_rainHourly_range" formatted="false" translatable="false" >%1$s of rain is forecast.</string>
+    <string name="rule_rain_light" formatted="false" translatable="false" >%1$s of rain expected.</string>
+    <string name="rule_rain_light_range" formatted="false" translatable="false" >%1$s of rain expected.</string>
+    <string name="rule_rain_moderate" formatted="false" translatable="false" >%1$s of moderate rainfall expected.</string>
+    <string name="rule_rain_moderate_range" formatted="false" translatable="false" >%1$s of moderate rainfall expected.</string>
+    <string name="rule_rapid_snow" formatted="false" translatable="false" >Rapidly accumulating snow with a total accumulation of %1$s. Poor visibility may make travel difficult.</string>
+    <string name="rule_rapid_snow_range" formatted="false" translatable="false" >Rapidly accumulating snow with a total accumulation of %1$s. Poor visibility will make travel difficult.</string>
+    <string name="rule_rec_of_high" formatted="false" translatable="false" >The forecast high temperature of %1$s may tie the record from %3$d.</string>
+    <string name="rule_rec_of_high_range" formatted="false" translatable="false" >The forecast high temperature of %1$s may tie the record from %3$d.</string>
+    <string name="rule_reclikely_high" formatted="false" translatable="false" >A new record high temperature is likely. The previous record was %2$s in %3$d.</string>
+    <string name="rule_reclikely_high3" formatted="false" translatable="false" >A new record high temperature of %1$s today! The previous record was %2$s in %3$d.</string>
+    <string name="rule_reclikely_high_range" formatted="false" translatable="false" >A new record high temperature is likely. The previous record was %2$s in %3$d.</string>
+    <string name="rule_reclikely_low" formatted="false" translatable="false" >A new record low temperature is likely. The previous record was %2$s in %3$d.</string>
+    <string name="rule_reclikely_low_range" formatted="false" translatable="false" >A new record low temperature is likely. The previous record was %2$s in %3$d.</string>
+    <string name="rule_recnear_high" formatted="false" translatable="false" >The high temperature is very close to the record high temperature of %2$s from %3$d.</string>
+    <string name="rule_recnear_low" formatted="false" translatable="false" >The low temperature is very close to the record low temperature of %2$s from %3$d.</string>
+    <string name="rule_record_cold" formatted="false" translatable="false" >The temperature is unseasonably cold! For %4$s, the average low temperature over the last 30 years is %2$s.</string>
+    <string name="rule_record_cold_range" formatted="false" translatable="false" >The temperature is unseasonably cold! The average low temperature over the last 30 years is %2$s.</string>
+    <string name="rule_record_high" formatted="false" translatable="false" >The current temperature ties the record high temperature of %1$s from %3$d.</string>
+    <string name="rule_record_low" formatted="false" translatable="false" >A new record low temperature! The previous record was %2$s in %3$d.</string>
+    <string name="rule_record_warm" formatted="false" translatable="false" >The temperature is unseasonably warm! For %4$s, the average high temperature over the last 30 years is %2$s.</string>
+    <string name="rule_record_warm_range" note="1" formatted="false" translatable="false" >The temperature is unseasonably warm! The average high temperature over the last 30 years is about %2$s.</string>
+    <string name="rule_significant_rain" formatted="false" translatable="false" >%1$s of significant rainfall expected.</string>
+    <string name="rule_significant_rain_range" formatted="false" translatable="false" >%1$s of significant rainfall expected.</string>
+    <string name="rule_sleet_expected" formatted="false" translatable="false" >Sleet is forecast.</string>
+    <string name="rule_sleet_expected_range" formatted="false" translatable="false" >Sleet is forecast.</string>
+    <string name="rule_sleet_falling" formatted="false" translatable="false" >Sleet is falling.</string>
+    <string name="rule_snow_dusting" formatted="false" translatable="false" >%1$s of snow is forecast.</string>
+    <string name="rule_snow_dusting_range" formatted="false" translatable="false" >%1$s of snow is forecast.</string>
+    <string name="rule_snow_expected" formatted="false" translatable="false" >%1$s of snow expected. Get ready to shovel!</string>
+    <string name="rule_snow_expected_range" formatted="false" translatable="false" >%1$s of snow expected. Get ready to shovel!</string>
+    <string name="rule_snow_expected_shovel" formatted="false" translatable="false" >%1$s of snow expected. Time to get gas for the snow blower!</string>
+    <string name="rule_snow_expected_shovel_range" formatted="false" translatable="false" >%1$s of snow expected. Time to get gas for the snow blower!</string>
+    <string name="rule_soaking_expected" formatted="false" translatable="false" >%1$s of soaking rain expected.</string>
+    <string name="rule_soaking_expected_range" formatted="false" translatable="false" >%1$s of soaking rain expected.</string>
+    <string name="rule_soaking_rain" formatted="false" translatable="false" >%1$s of soaking rain expected.</string>
+    <string name="rule_soaking_rain_range" formatted="false" translatable="false" >%1$s of soaking rain expected.</string>
+    <string name="rule_time_range_to" translatable="false">\u0020to\u0020</string>
+    <string name="rule_visibility_improving" formatted="false" translatable="false" >Visibility is improving!</string>
+    <string name="rule_visibility_is" formatted="false" translatable="false" >Visibility is %1$s.</string>
+    <string name="rule_visibility_low" formatted="false" translatable="false" >Low visibility. Reduce your speed and be alert when driving!</string>
+    <string name="rule_visibility_one_eight" formatted="false" translatable="false" >Visibility: %1$s. Reduce your speed and be alert when driving!</string>
+    <string name="rule_visibility_one_eight_range" formatted="false" translatable="false" >Low visibility. Reduce your speed and be alert when driving!</string>
+    <string name="rule_visibility_one_mile" formatted="false" translatable="false" >Visibility as low as %1$s possible.</string>
+    <string name="rule_visibility_one_mile_range" formatted="false" translatable="false" >Visibility as low as %1$s possible.</string>
+    <string name="rule_visibility_will_be" formatted="false" translatable="false" >Visibility will be %1$s.</string>
+    <string name="rule_visibility_will_be_range" formatted="false" translatable="false" >Visibility below %3$s.</string>
+    <string name="rule_warm_day" formatted="false" translatable="false" >Enjoy the warm day! The high temperature is %1$s above the climate average.</string>
+    <string name="rule_warm_day_range" formatted="false" translatable="false" >Enjoy the warm day! The temperature will be above the average high temperature.</string>
+    <string name="rule_warmest_time" formatted="false" translatable="false" >The high temperature will occur near %1$s.</string>
+    <string name="rule_warmest_time_range" formatted="false" translatable="false" >The high temperature will occur near %1$s.</string>
+    <string name="rule_weekend" formatted="false" translatable="false" >Pleasant %1$s in %2$s! Enjoy your weekend!</string>
+    <string name="rule_windspeed_15_30" formatted="false" translatable="false" >Breezy.</string>
+    <string name="rule_windspeed_15_30_range" formatted="false" translatable="false" >Breezy.</string>
+    <string name="rule_windspeed_30_40" formatted="false" translatable="false" >Wind speed: %1$s. Small items outside could be blown around by the wind. Driving in trucks and buses could be difficult.</string>
+    <string name="rule_windspeed_30_40_day" formatted="false" translatable="false" >High Wind speeds. Small items outside could be blown around by the wind. Driving in trucks and buses could be difficult.</string>
+    <string name="rule_windspeed_30_40_range" formatted="false" translatable="false" >Small items outside could be blown around by the wind. Driving in trucks and buses could be difficult.</string>
+    <string name="rule_windspeed_40" formatted="false" translatable="false" >High Wind speeds of %1$s. Secure any loose outdoor items which could be carried by the wind. Driving in trucks and buses may be difficult.</string>
+    <string name="rule_windspeed_40_range" formatted="false" translatable="false" >High wind speeds. Bring inside or secure any loose outside items which could be carried by the wind. Driving in trucks and buses is difficult.</string>
+    <string name="rule_windspeed_now_111_130" formatted="false" translatable="false" >The wind speed of %1$s has reached Category 3 Hurricane levels. Major damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_now_130_157" formatted="false" translatable="false" >The wind speed of %1$s has reached Category 4 Hurricane levels. Catastrophic damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_now_157" formatted="false" translatable="false" >The wind speed of %1$s has reached Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.</string>
+    <string name="rule_windspeed_now_157_range" formatted="false" translatable="false" >The wind speed has reached Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.</string>
+    <string name="rule_windspeed_now_74_96" formatted="false" translatable="false" >The wind speed of %1$s has reached Category 1 Hurricane levels. Roof and siding damage is possible and tree damage could lead to power outages.</string>
+    <string name="rule_windspeed_now_96_111" formatted="false" translatable="false" >The wind speed of %1$s has reached Category 2 Hurricane levels. Homes could have roof and siding damage while tree damage could lead to power outages.</string>
+    <string name="rule_windspeed_will_111_130" formatted="false" translatable="false" >The wind speed of %1$s will reach Category 3 Hurricane levels. Major damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_111_130_range" formatted="false" translatable="false" >The wind speed will reach Category 3 Hurricane levels. Major damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_130_157" formatted="false" translatable="false" >The wind speed of %1$s will reach Category 4 Hurricane levels. Catastrophic damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_130_157_range" formatted="false" translatable="false" >The wind speed will reach Category 4 Hurricane levels. Catastrophic structural damage to homes is expected and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_157" formatted="false" translatable="false" >The wind speed of %1$s will reach Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_157_range" formatted="false" translatable="false" >The wind speed will reach Category 5 Hurricane levels. Catastrophic damage to homes and power outages could last weeks.</string>
+    <string name="rule_windspeed_will_74_96" formatted="false" translatable="false" >The wind speed of %1$s will reach Category 1 Hurricane levels. Roof and siding damage is possible and tree damage could lead to power outages.</string>
+    <string name="rule_windspeed_will_74_96_range" formatted="false" translatable="false" >The wind speed will reach Category 1 Hurricane levels. Roof and siding damage is possible and tree damage could lead to power outages.</string>
+    <string name="rule_windspeed_will_96_111" formatted="false" translatable="false" >The wind speed of %1$s will reach Category 2 Hurricane levels. Homes could have roof and siding damage while tree damage could lead to power outages.</string>
+    <string name="rule_windspeed_will_96_111_range" formatted="false" translatable="false" >The wind speed will reach Category 2 Hurricane levels. Homes could have roof and siding damage while tree damage could lead to power outages.</string>
+  -->
+  ~ The Weather Company Confidential
+  ~ Unpublished Copyright (c) 2018 The Weather Company, All Rights Reserved.
+<!--
+</resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
