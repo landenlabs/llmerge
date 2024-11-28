@@ -1,5 +1,5 @@
 // Author:  Dennis Lang - 2020
-// Website: http://landenlabs.com
+// Website: https://landenlabs.com
 //
 // Description:  Text file line-by-line comparison or merge command line program.
 //
