@@ -1,6 +1,6 @@
 
 # LanDen Labs - llmerge 
-llmerge [Home website](http://landenlabs.com)  
+llmerge [Home website](https://landenlabs.com)  
 19-Jan-2020  
   
 ### Simple C++ Text file comparison and/or merge command line utility.
@@ -18,7 +18,7 @@ Simple text file row by row comparison or merge.
 
 ***  
   
-[Home webpage ](http://landenlabs.com/index.html) 
+[Home webpage ](https://landenlabs.com/index.html) 
 
 Related implementations:
 
@@ -67,4 +67,4 @@ Links:
  
   
 [To Top](#llmerge)  
-<br>[Home website](http://landenlabs.com)
+<br>[Home website](https://landenlabs.com)
