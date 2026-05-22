@@ -102,6 +102,7 @@ void displayRowsSideBySide(
     const lldiff::StrList& fileLines0 = diffInfo.fileLines0;
     const lldiff::StrList& fileLines1 = diffInfo.fileLines1;
 
+    std::cout << std::left;
     while (bRow0 < eRow0)   {
         if (diffInfo.verbose) {
             std::cout << "[" << right << std::setw(3) << bRow0 + 1 << "]" << left;
@@ -125,7 +126,8 @@ void displayRowsSideBySide(
         bRow1++;
     }
 
-    if (bRow0 == eRow0 && bRow1 == eRow1)  {
+    if (bRow0 == eRow0 && bRow1 == eRow1
+            && bRow0 < fileLines0.size() && bRow1 < fileLines1.size())  {
         if (diffInfo.verbose) {
             std::cout
                     << "[" << right << std::setw(3) << bRow0 + 1 << "]"
@@ -176,8 +178,8 @@ void compareTextFiles(const lldiff::Diff& diffInfo) {
     // Display any remainning lines.
     displayRowsSideBySide(
         diffInfo,
-        dsp0, (lldiff::RowNum)diffInfo.fileLines0.size() - 1,
-        dsp1, (lldiff::RowNum)diffInfo.fileLines1.size() - 1);
+        dsp0, (lldiff::RowNum)diffInfo.fileLines0.size(),
+        dsp1, (lldiff::RowNum)diffInfo.fileLines1.size());
 
     std::cout << Colors::colorize("_Y_[end]_X_\n");
 }
@@ -208,7 +210,8 @@ void mergeRowByRow(
         bRow1++;
     }
 
-    if (bRow0 == eRow0 && bRow1 == eRow1)  {
+    if (bRow0 == eRow0 && bRow1 == eRow1
+            && bRow0 < fileLines0.size() && bRow1 < fileLines1.size())  {
         if (diffInfo.identicalOut0) {
             std::cout  << diffInfo.getMerge(fileLines0[bRow0], diffInfo.mergeRxP[0]) << std::endl;
         }
@@ -249,8 +252,8 @@ void mergeTextDiles(lldiff::Diff& diffInfo) {
     // Display any remainning lines.
     mergeRowByRow(
         diffInfo,
-        dsp0, (lldiff::RowNum)diffInfo.fileLines0.size() - 1,
-        dsp1, (lldiff::RowNum)diffInfo.fileLines1.size() - 1);
+        dsp0, (lldiff::RowNum)diffInfo.fileLines0.size(),
+        dsp1, (lldiff::RowNum)diffInfo.fileLines1.size());
 }
 
 // ================================================================================================
