@@ -1,4 +1,4 @@
-// Author:  Dennis Lang - 2020
+// Author:  Dennis Lang - 2026
 // Website: https://landenlabs.com
 //
 // Description:  Text file line-by-line comparison.
