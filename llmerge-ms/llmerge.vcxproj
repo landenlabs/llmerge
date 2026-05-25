@@ -24,6 +24,10 @@
   <ItemGroup>
     <ClInclude Include="..\llmerge\colors.hpp" />
     <ClInclude Include="..\llmerge\lldiff.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="llmerge.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

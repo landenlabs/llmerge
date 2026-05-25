@@ -1,4 +1,4 @@
-// Author:  Dennis Lang - 2020
+// Author:  Dennis Lang - 2026
 // Website: https://landenlabs.com
 //
 // Description:  Text file line-by-line comparison or merge command line program.
@@ -27,7 +27,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#define VERSION "v6.05.05"
+#define VERSION "v6.05.25"
 
 #include "lldiff.hpp"
 #include "Colors.hpp"

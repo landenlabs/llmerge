@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(make)",
-      "Bash(./llmerge *)"
+      "Bash(./llmerge *)",
+      "Bash(git mv *)"
     ]
   }
 }
