@@ -27,7 +27,7 @@
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#define VERSION "v6.05.25"
+#define VERSION "v6.07.10"
 
 #include "lldiff.hpp"
 #include "colors.hpp"
