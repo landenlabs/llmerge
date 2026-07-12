@@ -30,7 +30,7 @@
 #define VERSION "v6.05.25"
 
 #include "lldiff.hpp"
-#include "Colors.hpp"
+#include "colors.hpp"
 using namespace std;
 
 const char* HELP =
@@ -283,6 +283,7 @@ bool verify(const char* msg, const regex* r1, const char* p1) {
 
 // ================================================================================================
 int main(int argc, char* argv[]) {
+    init();
 
     lldiff::Diff diffInfo;
     bool doMerge = false;
@@ -307,10 +308,15 @@ int main(int argc, char* argv[]) {
                 // value = dequote((char*)value1+1);
                 try {
                     regP = new regex(value1 + 1);
-                } catch (exception ex) {
+                } catch (const exception& ex) {
                     std::cerr << Colors::colorize("_R_Invalid regular expression _X_") << value1 + 1
                         << "\n" <<  ex.what()
                         << std::endl;
+                    // Without this, regP stayed stale (still pointing at whatever regex,
+                    // if any, an earlier CLI option had built), so a bad -c/-m/-r regex
+                    // silently reused a previous option's regex instead of being rejected.
+                    errorCnt++;
+                    regP = nullptr;
                 }
             }
 

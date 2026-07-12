@@ -35,6 +35,7 @@
 #pragma once
 
 #include <string>
+#include <regex>
 
 using namespace std;
 
@@ -81,9 +82,9 @@ public:
         replaceRE(str, "_w_(\\w+)",  WHITE "$1" OFF);
 
         // _X_  where X uppercase, colorize until _X_
-        replaceRE(str, "_r_", YELLOW);
+        replaceRE(str, "_Y_", YELLOW);
         replaceRE(str, "_R_", RED);
-        replaceRE(str, "_r_", GREEN);
+        replaceRE(str, "_G_", GREEN);
         replaceRE(str, "_P_", PINK);
         replaceRE(str, "_B_", BLUE);
         replaceRE(str, "_LB_", LBLUE);

@@ -114,16 +114,22 @@ public:
         StrList& vecLines = (idx == 0) ? fileLines0 : fileLines1;
         std::ifstream in;
         in.open(filename);
-        widths[idx] = readFile(in, vecLines, replaceList);
-        in.close();
-        std::cerr << vecLines.size() << " lines, max width=" << widths[idx] << " from:" << filename << std::endl;
+        // Check is_open() rather than inferring success from vecLines.size() > 0 -
+        // a file that opened fine but is legitimately empty was otherwise
+        // indistinguishable from a file that failed to open at all.
+        bool opened = in.is_open();
+        if (opened) {
+            widths[idx] = readFile(in, vecLines, replaceList);
+            in.close();
+            std::cerr << vecLines.size() << " lines, max width=" << widths[idx] << " from:" << filename << std::endl;
+        }
 
         if (idx == 0) {
             makeHash(fileLines0, hashList0, cmpRxP[0]);
         } else {
             makeHash(fileLines1, hashList1, cmpRxP[1]);
         }
-        return vecLines.size() > 0;
+        return opened;
     }
 
     // Get merged text row (optionally extract using regular expression).
@@ -169,12 +175,20 @@ public:
 
 
 protected:
+    // Count the length of the run of consecutive matching lines starting at row0/row1.
     unsigned rowMatches(RowNum row0, RowNum row1) const {
         unsigned cnt = 0;
         while (row0 < hashList0.size() && row1 < hashList1.size()) {
             if (hashList0[row0] == hashList1[row1]) {
                 if (cnt++ > maxMatch)
                     break;
+                // row0/row1 previously never advanced, so this degenerated into just
+                // checking whether the SAME single line pair matched (returning 0 or
+                // maxMatch+1) instead of measuring a run - the core resync heuristic for
+                // both compare and merge, so any single coincidental line-hash collision
+                // (blank lines, "}", common short lines) triggered a false resync.
+                row0++;
+                row1++;
             } else {
                 break;
             }
@@ -189,7 +203,9 @@ protected:
         std::smatch match;
         while (std::getline(iFile, str)) {
             for (auto&& regReplace : replaceList ) {
-                if (std::regex_match(str, match, regReplace.first)) {
+                // match.size() == 1 means the regex has no capture group (just the
+                // whole match) - match[1]/match.position(1) is then out of range.
+                if (std::regex_match(str, match, regReplace.first) && match.size() > 1) {
                     str.replace(match.position(1),  match[1].length(), regReplace.second);
                 }
             }
