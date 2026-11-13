@@ -22,8 +22,8 @@ llmerge [Home website](https://landenlabs.com)
 ### Simple C++ Text file comparison and/or merge command line utility.
 Simple text file row by row comparison or merge.
 
-  [![Build status](https://travis-ci.org/landenlabs/llmerge.svg?branch=master)](https://travis-ci.org/landenlabs/llmerge)
-  [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE.txt)
+  [![Build status](https://github.com/landenlabs/llmerge/actions/workflows/build.yml/badge.svg)](https://github.com/landenlabs/llmerge/actions/workflows/build.yml)
+  [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
   ![Language](https://img.shields.io/badge/language-C%2B%2B17-blue.svg)
   ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey.svg)
   
@@ -114,7 +114,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
-See [LICENSE.txt](LICENSE.txt) for the full license text.
+See [LICENSE](LICENSE) for the full license text.
  
   
 [To Top](#llmerge)  
